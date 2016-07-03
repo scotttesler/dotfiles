@@ -1,3 +1,4 @@
+" vim-plug -------------------------------------------------------------------
 " If we don't have vim plug installed, install it
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -5,23 +6,22 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-" Start vim-plug section
 call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript'
 call plug#end()
-" End vim-plug section
 
-" Start colorscheme section
+" Colorscheme ----------------------------------------------------------------
 syntax enable
 set background=dark
 colorscheme gruvbox
-" End colorscheme section
 
-set number
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
-set colorcolumn=80
-set wildmenu
+" UI Config ------------------------------------------------------------------
 set autoread
+set colorcolumn=80
+set number " show line numbers
+set showmatch " highlight matching [{()}]
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+set wildmenu " visual autocomplete for command menu
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -38,4 +38,8 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" Searching ------------------------------------------------------------------
+set incsearch " search as characters are entered
+set hlsearch " highlight matches
 
