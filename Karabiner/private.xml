@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Function + h = Left arrow</name>
+    <identifier>private.h_left</identifier>
+    <autogen>
+      __KeyToKey__ KeyCode::H, ModifierFlag::FN, KeyCode::CURSOR_LEFT
+    </autogen>
+  </item>
+  <item>
+    <name>Function + j = Down arrow</name>
+    <identifier>private.j_down</identifier>
+    <autogen>
+      __KeyToKey__ KeyCode::J, ModifierFlag::FN, KeyCode::CURSOR_DOWN
+    </autogen>
+  </item>
+  <item>
+    <name>Function + k = Up arrow</name>
+    <identifier>private.k_up</identifier>
+    <autogen>
+      __KeyToKey__ KeyCode::K, ModifierFlag::FN, KeyCode::CURSOR_UP
+    </autogen>
+  </item>
+  <item>
+    <name>Function + l = Right arrow</name>
+    <identifier>private.l_right</identifier>
+    <autogen>
+      __KeyToKey__ KeyCode::L, ModifierFlag::FN, KeyCode::CURSOR_RIGHT
+    </autogen>
+  </item>
+</root>
