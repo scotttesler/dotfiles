@@ -26,12 +26,6 @@ set splitright " split the new pane to the right of the current one
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set wildmenu " visual autocomplete for command menu
 
-" Make some pane-switching shortcuts
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
