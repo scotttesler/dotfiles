@@ -1,3 +1,6 @@
+" Init config ----------------------------------------------------------------
+set nocompatible " Don't care about compatibility with Vi.
+
 " vim-plug -------------------------------------------------------------------
 " If we don't have vim plug installed, install it
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -11,21 +14,28 @@ Plug 'pangloss/vim-javascript'
 call plug#end()
 
 " Colorscheme ----------------------------------------------------------------
-syntax enable
+syntax on
 set background=dark
 colorscheme gruvbox
 
-" UI Config ------------------------------------------------------------------
+" UI config ------------------------------------------------------------------
 set autoread
 set colorcolumn=80
-set lazyredraw " redraw the screen only when necessary
-set number " show line numbers
-set showmatch " highlight matching [{()}]
-set splitbelow " split the new pane below the current one
-set splitright " split the new pane to the right of the current one
+set lazyredraw " Redraw the screen only when necessary.
+set number " Show line numbers.
+set showmatch " Highlight matching [{()}].
+set splitbelow " Split the new pane below the current one.
+set splitright " Split the new pane to the right of the current one.
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
-set wildmenu " visual autocomplete for command menu
+set wildmenu " Visual autocomplete for command menu.
 
+" Syntax and indent by filetype
+filetype on
+filetype plugin on
+filetype indent on
+filetype plugin indent on
+
+" Remove extra whitespace on save
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
@@ -43,8 +53,8 @@ endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " Searching ------------------------------------------------------------------
-set incsearch " search as characters are entered
-set hlsearch " highlight matches
+set incsearch " Search as characters are entered
+set hlsearch " Highlight matches
 
 " Snippets -------------------------------------------------------------------
 nnoremap <silent> bp orequire 'pry'; binding.pry<Esc>
