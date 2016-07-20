@@ -1,4 +1,5 @@
 alias brewu="brew update && brew upgrade --all && brew cleanup"
+alias gbd="git branch -d"
 alias gpfwl="git push --force-with-lease && cowsay -f dragon-and-cow 'Force pushing!!!'"
 alias gri="git rebase -i origin/master"
 alias ls="ls -alGFh"
