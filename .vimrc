@@ -46,3 +46,6 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 set incsearch " search as characters are entered
 set hlsearch " highlight matches
 
+" Snippets -------------------------------------------------------------------
+nnoremap <silent> bp orequire 'pry'; binding.pry<Esc>
+
