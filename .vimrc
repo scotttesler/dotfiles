@@ -10,7 +10,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'SirVer/ultisnips'
 call plug#end()
 
 " Colorscheme ----------------------------------------------------------------
@@ -26,8 +28,8 @@ set number " Show line numbers.
 set showmatch " Highlight matching [{()}].
 set splitbelow " Split the new pane below the current one.
 set splitright " Split the new pane to the right of the current one.
-set t_Co=256 " Number of colors to use.
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+set t_Co=256 " Number of colors to use.
 set wildmenu " Visual autocomplete for command menu.
 
 " Syntax and indent by filetype
@@ -57,6 +59,22 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 set incsearch " Search as characters are entered
 set hlsearch " Highlight matches
 
+" CtrlP settings -------------------------------------------------------------
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
 " Snippets -------------------------------------------------------------------
-nnoremap <silent> bp orequire 'pry'; binding.pry<Esc>
+nnoremap <Leader> bp orequire 'pry'; binding.pry<Esc>
+
+" UltiSnips Key Maps and Settings
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+
+" Don't load snipmate snippets.
+let g:UltiSnipsEnableSnipMate=0
+
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
