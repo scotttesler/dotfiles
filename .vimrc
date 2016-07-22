@@ -26,6 +26,7 @@ set number " Show line numbers.
 set showmatch " Highlight matching [{()}].
 set splitbelow " Split the new pane below the current one.
 set splitright " Split the new pane to the right of the current one.
+set t_Co=256 " Number of colors to use.
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 set wildmenu " Visual autocomplete for command menu.
 
