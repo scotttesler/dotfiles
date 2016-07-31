@@ -12,13 +12,13 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'pangloss/vim-javascript'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 call plug#end()
 
 " Colorscheme ----------------------------------------------------------------
 syntax on
 set background=dark
-colorscheme gruvbox
+colorscheme dracula
 
 " UI config ------------------------------------------------------------------
 set autoread
