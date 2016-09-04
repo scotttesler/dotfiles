@@ -1,0 +1,8 @@
+alias brewu="brew update && brew upgrade --all && brew cleanup"
+alias gbd="git branch -d"
+alias gf="git fetch --all -p"
+alias gpfwl="git push --force-with-lease && cowsay -f dragon-and-cow 'Force pushing!!!'"
+alias gri="git rebase -i origin/master"
+alias ls="ls -alGFh"
+alias qf="git add . && git commit -m '.' && gri && gpfwl"
+alias vim="mvim -v"
