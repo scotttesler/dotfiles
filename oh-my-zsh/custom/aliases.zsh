@@ -1,6 +1,7 @@
 alias brewu="brew update && brew upgrade --all && brew cleanup"
 alias gbd="git branch -d"
 alias gf="git fetch --all -p"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gpfwl="git push --force-with-lease && cowsay -f dragon-and-cow 'Force pushing!!!'"
 alias gri="git rebase -i origin/master"
 alias ls="ls -alGFh"
