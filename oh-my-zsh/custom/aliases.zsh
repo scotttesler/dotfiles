@@ -6,4 +6,5 @@ alias gpfwl="git push --force-with-lease && cowsay -f dragon-and-cow 'Force push
 alias gri="git rebase -i origin/master"
 alias ls="ls -alGFh"
 alias qf="git add . && git commit -m '.' && gri && gpfwl"
+alias upd="brewu && pip3 install --upgrade pip setuptools wheel"
 alias vim="mvim -v"

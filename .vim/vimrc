@@ -1,25 +1,6 @@
 " Init config ----------------------------------------------------------------
 set nocompatible " Don't care about compatibility with Vi.
 
-" vim-plug -------------------------------------------------------------------
-" If we don't have vim plug installed, install it
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
-
-call plug#begin('~/.vim/plugged')
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'pangloss/vim-javascript'
-"Plug 'SirVer/ultisnips'
-call plug#end()
-
-" Colorscheme ----------------------------------------------------------------
-syntax on
-set background=dark
-colorscheme dracula
-
 " UI config ------------------------------------------------------------------
 set autoread
 set colorcolumn=80
@@ -60,11 +41,27 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 set incsearch " Search as characters are entered
 set hlsearch " Highlight matches
 
-" CtrlP settings -------------------------------------------------------------
+" vim-plug -------------------------------------------------------------------
+" If we don't have vim plug installed, install it
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'SirVer/ultisnips'
+Plug 'trevordmiller/nova-vim'
+call plug#end()
+
+" === CtrlP ===
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-" Snippets -------------------------------------------------------------------
+" === Snippets and Ultisnips ===
 nnoremap <Leader> bp orequire 'pry'; binding.pry<Esc>
 
 " UltiSnips Key Maps and Settings
@@ -78,4 +75,9 @@ let g:UltiSnipsEnableSnipMate=0
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" Colorscheme ----------------------------------------------------------------
+syntax on
+set background=dark
+colorscheme nova
 
