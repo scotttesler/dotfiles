@@ -13,4 +13,4 @@
 
 #### Cool stuff:
 
-- You will get a random emoticon in your bash prompt on bash start.
+- You will get a random emoji in your bash prompt on bash start.
