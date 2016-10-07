@@ -14,4 +14,3 @@
 #### Cool stuff:
 
 - You will get a random emoticon in your bash prompt on bash start.
-
