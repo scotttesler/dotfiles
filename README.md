@@ -8,8 +8,9 @@
 
 #### Requirements:
 
+1. Install to `~/.dotfiles`.
 1. `brew install coreutils`
-1. `nvm install 6.7.0 && npm install -g yodasay`
+1. `nvm install 7.2.1 && npm install -g yodasay`
 
 #### Cool stuff:
 
