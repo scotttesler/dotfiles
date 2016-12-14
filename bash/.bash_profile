@@ -7,10 +7,9 @@ alias dotfiles="cd ~/.dotfiles"
 alias gbd="git branch -d"
 alias gf="git fetch --all -p"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gpfwl="git push --force-with-lease && ~/.nvm/versions/node/v6.7.0/bin/yodasay 'Force pushed, you have.'
+alias gpfwl="git push --force-with-lease && ~/.nvm/versions/node/v6.7.0/bin/yodasay 'Force pushed, you have.'"
 alias gri="git rebase -i origin/master"
 alias ls="ls -alGFh"
 alias qf="git add . && git commit -m '.' && gri && gpfwl"
 alias proj="cd ~/Documents/Projects"
 alias upd="brewu && pip3 install --upgrade pip setuptools wheel"
-
