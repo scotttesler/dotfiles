@@ -5,7 +5,6 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ber="bundle exec rake"
 alias brewu="brew update && brew upgrade && brew cleanup"
 alias dotfiles="cd ~/.dotfiles"
-alias gbd="git branch -d"
 alias gf="git fetch --all -p && git pull"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gpfwl="git push --force-with-lease && ~/.nvm/versions/node/v7.2.1/bin/yodasay 'Force pushed, you have.'"
