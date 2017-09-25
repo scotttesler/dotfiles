@@ -1,3 +1,7 @@
+if [ -f ~/.bashrc ]; then          
+  source ~/.bashrc                 
+fi
+
 export PS1="\[\033[36m\]$(gshuf -n 1 ~/.dotfiles/bash/emojis.txt)\[\033[m\]  \[\033[33;1m\]\w\[\033[m\]\[\033[36m\] (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2))\[\033[m\] \$\n"
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
