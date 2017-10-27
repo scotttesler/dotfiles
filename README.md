@@ -10,7 +10,7 @@
 
 1. Install to `~/.dotfiles`.
 1. `brew install coreutils`
-1. `nvm install 7.2.1 && npm install -g yodasay`
+1. `npm i -g yodasay lolcatjs`
 
 #### Cool stuff:
 

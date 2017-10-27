@@ -1,8 +1,8 @@
-" Init config ----------------------------------------------------------------
+" Init config -----------------------------------------------------------------
 set clipboard=unnamed
 set nocompatible " Don't care about compatibility with Vi.
 
-" UI config ------------------------------------------------------------------
+" UI config -------------------------------------------------------------------
 set colorcolumn=80
 set number " Show line numbers.
 set relativenumber " Show relative line numbers.
@@ -10,10 +10,27 @@ set splitbelow " Split the new pane below the current one.
 set splitright " Split the new pane to the right of the current one.
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2
 
-" Snippets ----------------------------------------------------------------
+" Remove extra whitespace on save ---------------------------------------------
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
+
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" Snippets --------------------------------------------------------------------
 "nnoremap <Leader> bp orequire 'pry'; binding.pry<Esc>
 
-" Colorscheme ----------------------------------------------------------------
+" Colorscheme -----------------------------------------------------------------
 syntax on
 set background=light
 let g:solarized_termcolors=256
