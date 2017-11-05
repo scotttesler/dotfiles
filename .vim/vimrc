@@ -4,6 +4,7 @@ set nocompatible " Don't care about compatibility with Vi.
 
 " UI config -------------------------------------------------------------------
 set colorcolumn=80
+set nowrap " Do not wrap long lines.
 set number " Show line numbers.
 set relativenumber " Show relative line numbers.
 set splitbelow " Split the new pane below the current one.
@@ -27,8 +28,8 @@ endfun
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-" Snippets --------------------------------------------------------------------
-"nnoremap <Leader> bp orequire 'pry'; binding.pry<Esc>
+" NERDTree
+map <C-\> :NERDTreeToggle<CR>
 
 " Colorscheme -----------------------------------------------------------------
 syntax on
