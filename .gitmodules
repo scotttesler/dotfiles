@@ -1,6 +1,7 @@
-[submodule ".vim/bundle/start/ctrlp.vim"]
-	path = .vim/bundle/start/ctrlp.vim
-	url = git@github.com:ctrlpvim/ctrlp.vim.git
 [submodule ".vim/pack/packages/start/ctrlp.vim"]
 	path = .vim/pack/packages/start/ctrlp.vim
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
+
+[submodule ".vim/pack/packages/start/nerdtree"]
+	path = .vim/pack/packages/start/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
