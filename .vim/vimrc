@@ -4,6 +4,7 @@ set nocompatible " Don't care about compatibility with Vi.
 
 " UI config -------------------------------------------------------------------
 set colorcolumn=80
+set mouse=a
 set nowrap " Do not wrap long lines.
 set number " Show line numbers.
 set relativenumber " Show relative line numbers.
