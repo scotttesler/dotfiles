@@ -28,8 +28,26 @@ endfun
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-" NERDTree
+" NERDTree --------------------------------------------------------------------
 map <C-\> :NERDTreeToggle<CR>
+
+" Prettier --------------------------------------------------------------------
+let g:prettier#autoformat = 0
+
+" single quotes over double quotes
+let g:prettier#config#single_quote = "false"
+
+" print spaces between brackets
+let g:prettier#config#bracket_spacing = "true"
+
+" put > on the last line instead of new line
+let g:prettier#config#jsx_bracket_same_line = "false"
+
+" none|es5|all
+let g:prettier#config#trailing_comma = "none"
+
+" flow|babylon|typescript|css|less|scss|json|graphql|markdown
+let g:prettier#config#parser = "babylon"
 
 " Colorscheme -----------------------------------------------------------------
 syntax on
