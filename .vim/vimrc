@@ -31,6 +31,7 @@ endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " NERDTree --------------------------------------------------------------------
+let NERDTreeShowHidden=1
 map <C-\> :NERDTreeToggle<CR>
 
 " Prettier --------------------------------------------------------------------
