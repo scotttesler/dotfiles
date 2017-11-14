@@ -11,6 +11,7 @@ set relativenumber " Show relative line numbers.
 set splitbelow " Split the new pane below the current one.
 set splitright " Split the new pane to the right of the current one.
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2
+set termguicolors
 
 " Remove extra whitespace on save ---------------------------------------------
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -52,6 +53,7 @@ let g:prettier#config#parser = "babylon"
 
 " Colorscheme -----------------------------------------------------------------
 syntax on
-set background=light
+set background=dark
 let g:solarized_termcolors=256
 colorscheme dracula
+
