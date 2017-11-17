@@ -6,15 +6,11 @@
 	path = .vim/pack/packages/start/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
 
-[submodule ".vim/pack/packages/start/vim-airline"]
-	path = .vim/pack/packages/start/vim-airline
-	url = git@github.com:vim-airline/vim-airline.git
-
-[submodule ".vim/pack/packages/start/vim-commentary"]
-	path = .vim/pack/packages/start/vim-commentary
-	url = git@github.com:tpope/vim-commentary.git
-
 [submodule ".vim/pack/packages/start/vim-prettier"]
 	path = .vim/pack/packages/start/vim-prettier
 	url = git@github.com:prettier/vim-prettier.git
+
+[submodule ".vim/pack/packages/start/tcomment_vim"]
+	path = .vim/pack/packages/start/tcomment_vim
+	url = git@github.com:tomtom/tcomment_vim.git
 
