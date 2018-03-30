@@ -23,7 +23,7 @@ db() {
   done
 
   git checkout master
-  git branch -d $current_branch
+  git branch -D $current_branch
   git fetch --all -p
   git pull
   return 0
