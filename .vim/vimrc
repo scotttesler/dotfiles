@@ -57,3 +57,6 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme dracula
 
+" OnStartup -------------------------------------------------------------------
+autocmd VimEnter * RltvNmbr
+
