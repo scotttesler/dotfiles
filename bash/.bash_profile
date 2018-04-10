@@ -32,7 +32,7 @@ db() {
 alias ber="bundle exec rake"
 alias brewu="brew update && brew upgrade && brew cleanup"
 alias dotfiles="cd ~/.dotfiles"
-alias gf="git fetch --all -p && git pull"
+alias gf="git gc --prune=now && git fetch --all -p && git pull"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gpfwl="git push --force-with-lease && yodasay 'Force pushed, you have.' | lolcatjs"
 alias gri="git rebase -i origin/master"
