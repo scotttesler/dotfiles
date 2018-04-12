@@ -1,6 +1,5 @@
 " Init config -----------------------------------------------------------------
 set clipboard=unnamed
-set nocompatible " Don't care about compatibility with Vi.
 
 " UI config -------------------------------------------------------------------
 set colorcolumn=80
@@ -11,6 +10,12 @@ set relativenumber " Show relative line numbers.
 set splitbelow " Split the new pane below the current one.
 set splitright " Split the new pane to the right of the current one.
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2
+
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 
 " Remove extra whitespace on save ---------------------------------------------
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -35,28 +40,24 @@ map <C-\> :NERDTreeToggle<CR>
 
 " Prettier --------------------------------------------------------------------
 let g:prettier#autoformat = 0
-
-" single quotes over double quotes
-let g:prettier#config#single_quote = "false"
-
-" print spaces between brackets
-let g:prettier#config#bracket_spacing = "true"
-
-" put > on the last line instead of new line
-let g:prettier#config#jsx_bracket_same_line = "false"
-
-" none|es5|all
-let g:prettier#config#trailing_comma = "none"
-
-" flow|babylon|typescript|css|less|scss|json|graphql|markdown
-let g:prettier#config#parser = "babylon"
+let g:prettier#exec_cmd_async = 1
+let g:prettier#config#single_quote = 'false'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+let g:prettier#config#arrow_parens = 'avoid'
+let g:prettier#config#trailing_comma = 'none'
+let g:prettier#config#parser = 'babylon'
 
 " Colorscheme -----------------------------------------------------------------
 syntax on
-set background=dark
 let g:solarized_termcolors=256
 colorscheme dracula
+set background=dark
 
 " OnStartup -------------------------------------------------------------------
 autocmd VimEnter * RltvNmbr
 
+" Local config ----------------------------------------------------------------
+if filereadable($HOME . "/.vimrc.local")
+  source ~/.vimrc.local
+endif
