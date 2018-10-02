@@ -58,9 +58,6 @@ set background=dark
 " Change vim bracket highlighting colors
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
-" OnStartup -------------------------------------------------------------------
-autocmd VimEnter * RltvNmbr
-
 " Local config ----------------------------------------------------------------
 if filereadable($HOME . "/.vim/vimrc.local")
   source ~/.vim/vimrc.local
