@@ -1,5 +1,6 @@
 " Init config -----------------------------------------------------------------
 set clipboard=unnamed
+set shellcmdflag=-ic " Enable bash aliases.
 
 " UI config -------------------------------------------------------------------
 set colorcolumn=80
