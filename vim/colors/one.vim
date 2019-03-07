@@ -9,7 +9,7 @@
 set background=dark
 highlight clear
 if exists("syntax_on")
-	syntax reset
+  syntax reset
 endif
 let g:colors_name = "one"
 
@@ -32,39 +32,39 @@ let s:G_SyntaxGuide='#3B3F48'
 let s:G_SyntaxAccent='#528BFF'
 
 if &t_Co == 256
-	let s:T_Mono1='249'
-	let s:T_Mono2='245'
-	let s:T_Mono3='241'
-	let s:T_Hue1='73'
-	let s:T_Hue2='75'
-	let s:T_Hue3='170'
-	let s:T_Hue4='150'
-	let s:T_Hue5='167'
-	let s:T_Hue52='131'
-	let s:T_Hue6='180'
-	let s:T_Hue62='179'
-	let s:T_SyntaxFG=s:T_Mono1
-	let s:T_SyntaxBG='236'
-	let s:T_SyntaxGutter='60'
-	let s:T_SyntaxGuide='237'
-	let s:T_SyntaxAccent='69'
+  let s:T_Mono1='249'
+  let s:T_Mono2='245'
+  let s:T_Mono3='241'
+  let s:T_Hue1='73'
+  let s:T_Hue2='75'
+  let s:T_Hue3='170'
+  let s:T_Hue4='150'
+  let s:T_Hue5='167'
+  let s:T_Hue52='131'
+  let s:T_Hue6='180'
+  let s:T_Hue62='179'
+  let s:T_SyntaxFG=s:T_Mono1
+  let s:T_SyntaxBG='236'
+  let s:T_SyntaxGutter='60'
+  let s:T_SyntaxGuide='237'
+  let s:T_SyntaxAccent='69'
 else
-	let s:T_Mono1='Gray'
-	let s:T_Mono2='DarkGray'
-	let s:T_Mono3='DarkGray'
-	let s:T_Hue1='Cyan'
-	let s:T_Hue2='Blue'
-	let s:T_Hue3='Magenta'
-	let s:T_Hue4='Green'
-	let s:T_Hue5='Red'
-	let s:T_Hue52='DarkRed'
-	let s:T_Hue6='Yellow'
-	let s:T_Hue62='DarkYellow'
-	let s:T_SyntaxFG=s:T_Mono1
-	let s:T_SyntaxBG='Black'
-	let s:T_SyntaxGutter='DarkGray'
-	let s:T_SyntaxGuide='DarkGray'
-	let s:T_SyntaxAccent='DarkGray'
+  let s:T_Mono1='Gray'
+  let s:T_Mono2='DarkGray'
+  let s:T_Mono3='DarkGray'
+  let s:T_Hue1='Cyan'
+  let s:T_Hue2='Blue'
+  let s:T_Hue3='Magenta'
+  let s:T_Hue4='Green'
+  let s:T_Hue5='Red'
+  let s:T_Hue52='DarkRed'
+  let s:T_Hue6='Yellow'
+  let s:T_Hue62='DarkYellow'
+  let s:T_SyntaxFG=s:T_Mono1
+  let s:T_SyntaxBG='Black'
+  let s:T_SyntaxGutter='DarkGray'
+  let s:T_SyntaxGuide='DarkGray'
+  let s:T_SyntaxAccent='DarkGray'
 endif
 
 " Base vim color scheme

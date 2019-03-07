@@ -221,7 +221,7 @@ call s:h('DraculaSearch', s:green, s:none, [s:attrs.inverse])
 call s:h('DraculaBoundary', s:comment, s:bgdark)
 call s:h('DraculaLink', s:cyan, s:none, [s:attrs.underline])
 
-call s:h('DraculaDiffChange', s:none, s:none)
+call s:h('DraculaDiffChange', s:orange, s:none)
 call s:h('DraculaDiffText', s:bg, s:orange)
 call s:h('DraculaDiffDelete', s:red, s:bgdark)
 
@@ -236,11 +236,13 @@ set background=dark
 call s:h('Normal', s:fg, s:Background())
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
+call s:h('StatusLineTerm', s:none, s:bglighter, [s:attrs.bold])
+call s:h('StatusLineTermNC', s:none, s:bglight)
 call s:h('WildMenu', s:bg, s:purple, [s:attrs.bold])
 call s:h('CursorLine', s:none, s:subtle)
 
-hi! link ColorColumn  DraculaSelection
-hi! link CursorColumn DraculaSelection
+hi! link ColorColumn  DraculaBgDark
+hi! link CursorColumn DraculaBgDark
 hi! link CursorLineNr DraculaYellow
 hi! link DiffAdd      DraculaGreen
 hi! link DiffAdded    DiffAdd
@@ -276,7 +278,7 @@ hi! link WarningMsg   DraculaOrangeInverse
 " Syntax: {{{
 
 " Required as some plugins will overwrite
-call s:h('MatchParen', s:fg, s:pink, [s:attrs.underline])
+call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
 call s:h('Conceal', s:comment, s:bglight)
 
 " Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
@@ -338,3 +340,4 @@ hi! link helpBacktick Special
 "}}}
 
 " vim: fdm=marker ts=2 sts=2 sw=2:
+
