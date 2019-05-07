@@ -33,18 +33,36 @@ db() {
   git branch -D $current_branch
   git fetch --all -p
   git pull
+
   return 0
+}
+
+updateVimPackages() {
+  current_dir=`eval "pwd"`
+
+  cd ~/.vim/pack/packages/start
+
+  for d in */ ; do
+    cd $d
+    git gc --prune=now
+    git fetch --all -p
+    git pull
+    cd ..
+  done
+
+  cd $current_dir
 }
 
 alias ber="bundle exec rake"
 alias brewu="brew update && brew upgrade && brew cleanup"
 alias dotfiles="cd ~/dotfiles"
+alias gd="git diff"
 alias gf="git gc --prune=now && git fetch --all -p && git pull"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gpfwl="git push --force-with-lease && yodasay 'Force pushed, you have.' | lolcatjs"
+alias gpfwl="git push --force-with-lease && cowsay -r 'Force push (with lease)' | lolcatjs"
 alias gri="git rebase -i origin/master"
 alias gs="git status"
 alias ls="ls -alGFh"
-alias qf="git add . && git commit -m '.' && gri && gpfwl"
 alias proj="cd ~/Documents/Projects"
-alias upd="brewu && pip3 install --upgrade --user awscli pip setuptools wheel && npm i -g npm && npm update -g"
+alias qf="git add . && git commit -m '.' && gri && gpfwl"
+alias upd="brewu && npm i -g npm && npm update -g && pip3 install --upgrade pip setuptools wheel && updateVimPackages"
