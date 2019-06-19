@@ -52,8 +52,7 @@ let g:prettier#config#parser = 'babylon'
 
 " Colorscheme -----------------------------------------------------------------
 syntax on
-let g:solarized_termcolors=256
-colorscheme dracula
+colorscheme one
 set background=dark
 
 " Change vim bracket highlighting colors

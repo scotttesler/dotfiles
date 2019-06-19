@@ -1,0 +1,9 @@
+'.source.ruby':
+  'Console log':
+    'prefix': 'bp'
+    'body': 'require \'pry\'; binding.pry'
+
+'.source.python':
+  'Import and use debugger':
+    'prefix': 'pdb'
+    'body': 'import pdb; pdb.set_trace()'

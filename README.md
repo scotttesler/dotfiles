@@ -1,13 +1,15 @@
-# Scott Tesler's dotfiles
-
+Scott Tesler's dotfiles
 ---
 
-## .bash_profile
 
-- Located in the `bash` directory.
+Requirements
+---
 
-#### Requirements:
 
-1. Install to `~/.dotfiles`.
-1. `brew install coreutils`
-1. `npm i -g cowsay lolcatjs`
+Install
+---
+
+Clone onto your laptop:
+
+    git clone git://github.com/scotttesler/dotfiles.git ~/dotfiles
+    npm i -g cowsay lolcatjs
