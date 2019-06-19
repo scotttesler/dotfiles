@@ -8,24 +8,38 @@ function exit_if_dotfiles_dir_exists() {
     echo "Exiting..."
     return 1
   fi
-
-  return 0
 }
 
 function install_zsh() {
   echo "Installing zsh..."
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-  return 0
 }
 
 function setup_node() {
   echo "Installing nvm..."
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh)"
-  source "~/.$SHELLrc"
+  # source "~/.zshrc"
+
+  nvm install node
+  npm i -g npm cowsay lolcatjs
+}
+
+function install_vim_packages() {
+  cd ~/.vim/pack/packages/start
+
+  git clone git@github.com:dracula/vim.git color-dracula
+  git clone git@github.com:ctrlpvim/ctrlp.vim.git ctrlp
+  git clone git@github.com:scrooloose/nerdtree.git
+  git clone git@github.com:tomtom/tcomment_vim.git tcomment
+
+  # https://github.com/prettier/vim-prettier/tree/dc1dd622c4b82ec093e8ca36c93d582d4f92fd25#install
+  git clone git@github.com:prettier/vim-prettier.git prettier
+  cd prettier
+  npm i
 }
 
 function setup_vim() {
+  current_dir=`eval "pwd"`
   to_dir=`eval "realpath ~/.vim"`
 
   if [ -d "$to_dir" ]; then
@@ -34,9 +48,9 @@ function setup_vim() {
   fi
 
   cp -r ./vim $to_dir
-  # Install packages.
+  install_vim_packages
 
-  return 0
+  cd $current_dir
 }
 
 function setup_zsh() {

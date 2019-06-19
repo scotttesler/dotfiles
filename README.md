@@ -9,7 +9,9 @@ Requirements
 Install
 ---
 
-Clone onto your laptop:
+    ./install.sh
 
-    git clone git://github.com/scotttesler/dotfiles.git ~/dotfiles
-    npm i -g cowsay lolcatjs
+Update
+---
+
+🚧 WIP 🚧
