@@ -1,9 +1,21 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+{
+
+function ensure_dependencies_exist() {
+  if [[ ! user_has curl ]]; then
+    echo "ERROR: Required dependency curl missing."
+    exit 1
+  elif [[ ! user_has git ]]; then
+    echo "ERROR: Required dependency git missing."
+    exit 1
+  fi
+}
 
 function exit_if_dotfiles_dir_exists() {
-  to_dir=`eval "realpath ~/dotfiles"`
+  local to_dir="$HOME/dotfiles"
 
-  if [ -d "$to_dir" ]; then
+  if [[ -d "$to_dir" ]]; then
     echo "ERROR: The $to_dir directory already exists."
     echo "Exiting..."
     return 1
@@ -18,7 +30,12 @@ function install_zsh() {
 function setup_node() {
   echo "Installing nvm..."
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh)"
-  # source "~/.zshrc"
+
+  shell_startup_file = "~/.bashrc"
+  if [[ "$SHELL" == *"zsh"* ]]; then
+    shell_startup_file = "~/.zshrc"
+  fi
+  source $shell_startup_file
 
   nvm install node
   npm i -g npm cowsay lolcatjs
@@ -39,10 +56,10 @@ function install_vim_packages() {
 }
 
 function setup_vim() {
-  current_dir=`eval "pwd"`
-  to_dir=`eval "realpath ~/.vim"`
+  local current_dir=`eval "pwd"`
+  local to_dir="$HOME/.vim"
 
-  if [ -d "$to_dir" ]; then
+  if [[ -d "$to_dir" ]]; then
     echo "INFO: The $to_dir directory already exists. Skipping Vim setup."
     return 0
   fi
@@ -75,13 +92,20 @@ function setup_zsh() {
   fi
 }
 
+function user_has() {
+  type "$1" > /dev/null 2>&1
+}
+
 function main() {
-  # Stop at the first non-zero exit code.
   set -e
 
-  setup_zsh
-  setup_node
-  setup_vim
+  ensure_dependencies_exist
+
+  profile_is_bash_or_zsh
+
+  # setup_zsh
+  # setup_node
+  # setup_vim
 
   # exit_if_dotfiles_dir_exists
 
@@ -91,3 +115,5 @@ function main() {
 }
 
 main
+
+}
