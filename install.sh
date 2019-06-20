@@ -85,6 +85,8 @@ function main() {
 
   # exit_if_dotfiles_dir_exists
 
+  # Explain what else needs to be done manually.
+
   echo "Finished."
 }
 
