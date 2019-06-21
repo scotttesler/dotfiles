@@ -1,0 +1,24 @@
+[
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "cmd+k cmd+b",
+    "when": ""
+  },
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "cmd+\\",
+    "when": ""
+  },
+  {
+    "command": "-workbench.action.focusSideBar",
+    "key": "cmd+0"
+  },
+  {
+    "command": "workbench.action.zoomReset",
+    "key": "cmd+0"
+  },
+  {
+    "command": "-workbench.action.zoomReset",
+    "key": "cmd+numpad0"
+  }
+]

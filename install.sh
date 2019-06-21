@@ -101,8 +101,6 @@ function main() {
 
   ensure_dependencies_exist
 
-  profile_is_bash_or_zsh
-
   # setup_zsh
   # setup_node
   # setup_vim
