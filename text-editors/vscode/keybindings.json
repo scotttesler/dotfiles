@@ -1,13 +1,11 @@
 [
   {
     "command": "workbench.action.toggleSidebarVisibility",
-    "key": "cmd+k cmd+b",
-    "when": ""
+    "key": "cmd+k cmd+b"
   },
   {
     "command": "workbench.action.toggleSidebarVisibility",
-    "key": "cmd+\\",
-    "when": ""
+    "key": "cmd+\\"
   },
   {
     "command": "-workbench.action.focusSideBar",

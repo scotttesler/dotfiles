@@ -1,13 +1,14 @@
 {
-  "breadcrumbs.enabled": false,
-  "css.completion.triggerPropertyValueCompletion": false,
-  "editor.minimap.enabled": false,
-  "editor.renderWhitespace": "all",
+  "editor.multiCursorModifier": "ctrlCmd",
   "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
   "files.autoSave": "onFocusChange",
-  "git.enabled": false,
-  "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": null,
-  "workbench.statusBar.visible": false
+  "css.completion.triggerPropertyValueCompletion": false,
+  "git.enabled": false,
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "workbench.colorTheme": "Atom One Dark"
 }
