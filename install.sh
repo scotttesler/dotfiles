@@ -44,7 +44,9 @@ function setup_node() {
 function install_vim_packages() {
   cd ~/.vim/pack/packages/start
 
-  git clone git@github.com:dracula/vim.git color-dracula
+  # This doesn't work; the color needs to be in this repo and copied.
+  # git clone git@github.com:dracula/vim.git color-dracula
+
   git clone git@github.com:ctrlpvim/ctrlp.vim.git ctrlp
   git clone git@github.com:scrooloose/nerdtree.git
   git clone git@github.com:tomtom/tcomment_vim.git tcomment

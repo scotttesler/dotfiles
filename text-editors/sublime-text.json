@@ -7,15 +7,8 @@
   "font_size": 17,
   "highlight_line": true,
   "highlight_modified_tabs": true,
-  "ignored_packages":
-  [
-    "JavaScript",
-    "Vintage"
-  ],
-  "rulers":
-  [
-    80
-  ],
+  "ignored_packages": ["JavaScript", "Vintage"],
+  "rulers": [80],
   "save_on_focus_lost": true,
   "scroll_past_end": true,
   "show_line_endings": true,
