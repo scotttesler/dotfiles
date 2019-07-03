@@ -53,7 +53,9 @@ let g:prettier#config#parser = 'babylon'
 " Colorscheme -----------------------------------------------------------------
 syntax on
 colorscheme one
-set background=dark
+
+" Lightline
+let g:lightline = { 'colorscheme': 'one' }
 
 " Change vim bracket highlighting colors
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta

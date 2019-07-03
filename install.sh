@@ -31,9 +31,9 @@ function setup_node() {
   echo "Installing nvm..."
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh)"
 
-  shell_startup_file = "~/.bashrc"
+  shell_startup_file="~/.bashrc"
   if [[ "$SHELL" == *"zsh"* ]]; then
-    shell_startup_file = "~/.zshrc"
+    shell_startup_file="~/.zshrc"
   fi
   source $shell_startup_file
 
@@ -48,6 +48,7 @@ function install_vim_packages() {
   # git clone git@github.com:dracula/vim.git color-dracula
 
   git clone git@github.com:ctrlpvim/ctrlp.vim.git ctrlp
+  git clone git@github.com:itchyny/lightline.vim.git lightline
   git clone git@github.com:scrooloose/nerdtree.git
   git clone git@github.com:tomtom/tcomment_vim.git tcomment
 
