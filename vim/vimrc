@@ -51,11 +51,9 @@ let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#parser = 'babylon'
 
 " Colorscheme -----------------------------------------------------------------
+packadd! color-one-dark
 syntax on
-colorscheme one
-
-" Lightline
-let g:lightline = { 'colorscheme': 'one' }
+colorscheme onedark
 
 " Change vim bracket highlighting colors
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta

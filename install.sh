@@ -41,14 +41,10 @@ function setup_node() {
   npm i -g npm cowsay lolcatjs
 }
 
-function install_vim_packages() {
+function install_vim_start_packages() {
   cd ~/.vim/pack/packages/start
 
-  # This doesn't work; the color needs to be in this repo and copied.
-  # git clone git@github.com:dracula/vim.git color-dracula
-
   git clone git@github.com:ctrlpvim/ctrlp.vim.git ctrlp
-  git clone git@github.com:itchyny/lightline.vim.git lightline
   git clone git@github.com:scrooloose/nerdtree.git
   git clone git@github.com:tomtom/tcomment_vim.git tcomment
 
@@ -56,6 +52,13 @@ function install_vim_packages() {
   git clone git@github.com:prettier/vim-prettier.git prettier
   cd prettier
   npm i
+}
+
+function install_vim_opt_packages() {
+  cd ~/.vim/pack/packages/opt
+
+  git clone git@github.com:dracula/vim.git color-dracula
+  git clone git@github.com:joshdick/onedark.vim.git color-one-dark
 }
 
 function setup_vim() {
