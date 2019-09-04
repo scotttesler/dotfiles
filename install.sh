@@ -47,6 +47,8 @@ function install_vim_start_packages() {
   git clone git@github.com:ctrlpvim/ctrlp.vim.git ctrlp
   git clone git@github.com:scrooloose/nerdtree.git
   git clone git@github.com:tomtom/tcomment_vim.git tcomment
+  git clone git@github.com:pangloss/vim-javascript.git
+  git clone git@github.com:mxw/vim-jsx.git
 
   # https://github.com/prettier/vim-prettier/tree/dc1dd622c4b82ec093e8ca36c93d582d4f92fd25#install
   git clone git@github.com:prettier/vim-prettier.git prettier
