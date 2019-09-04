@@ -71,7 +71,8 @@ function setup_vim() {
   fi
 
   cp -r ./vim $to_dir
-  install_vim_packages
+  install_vim_start_packages
+  install_vim_opt_packages
 
   cd $current_dir
 }
@@ -107,9 +108,9 @@ function main() {
 
   ensure_dependencies_exist
 
-  # setup_zsh
-  # setup_node
-  # setup_vim
+  setup_zsh
+  setup_node
+  setup_vim
 
   # exit_if_dotfiles_dir_exists
 

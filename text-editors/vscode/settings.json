@@ -7,8 +7,9 @@
   "editor.renderWhitespace": "all",
   "files.autoSave": "onFocusChange",
   "git.enabled": false,
+  "window.zoomLevel": 1,
   "workbench.statusBar.visible": false,
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Atom One Dark",
-  "workbench.iconTheme": null
+  "workbench.iconTheme": "vscode-icons"
 }
