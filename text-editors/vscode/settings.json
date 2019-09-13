@@ -11,8 +11,9 @@
   "editor.tabSize": 2,
   "files.autoSave": "onFocusChange",
   "git.enabled": false,
+  "terminal.integrated.rendererType": "dom",
   "workbench.statusBar.visible": false,
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "One Dark Pro Vivid",
-  "workbench.iconTheme": "vscode-icons"
+  "workbench.iconTheme": "atom-icons"
 }
