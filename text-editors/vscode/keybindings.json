@@ -1,5 +1,9 @@
 [
   {
+    "command": "editor.action.copyLinesDownAction",
+    "key": "shift+cmd+d"
+  },
+  {
     "command": "workbench.action.toggleSidebarVisibility",
     "key": "cmd+k cmd+b"
   },
