@@ -4,8 +4,14 @@
   },
   "breadcrumbs.enabled": false,
   "css.completion.triggerPropertyValueCompletion": false,
+  "editor.acceptSuggestionOnEnter": "off",
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
   "editor.quickSuggestionsDelay": 1000,
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
