@@ -1,15 +1,18 @@
 {
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "breadcrumbs.enabled": false,
   "css.completion.triggerPropertyValueCompletion": false,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.tabSize": 2,
+  "editor.quickSuggestionsDelay": 1000,
   "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
   "files.autoSave": "onFocusChange",
   "git.enabled": false,
-  "window.zoomLevel": 1,
   "workbench.statusBar.visible": false,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorTheme": "One Dark Pro Vivid",
   "workbench.iconTheme": "vscode-icons"
 }
