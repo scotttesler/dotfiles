@@ -10,15 +10,19 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.quickSuggestionsDelay": 1000,
   "editor.renderWhitespace": "all",
+  "editor.rulers": [
+    80
+  ],
   "editor.tabSize": 2,
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
   "git.enabled": false,
   "terminal.integrated.rendererType": "dom",
   "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "One Dark Pro Vivid",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.colorTheme": "One Dark Pro Vivid",
   "workbench.iconTheme": "atom-icons",
   "workbench.statusBar.visible": false
 }
