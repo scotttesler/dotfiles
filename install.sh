@@ -2,6 +2,41 @@
 
 {
 
+DOTFILES_DIR="$HOME/.dotfiles"
+OH_MY_ZSH_DIR="$HOME/.oh-my-zsh"
+NVIM_CONFIG_DIR="$HOME/.config/nvim"
+VIM_DIR="$HOME/.vim"
+
+function clone_dotfiles_directory() {
+  echo "Cloning the dotfiles directory to $DOTFILES_DIR ..."
+
+  exit_if_dotfiles_dir_exists
+
+  git clone git@github.com:scotttesler/dotfiles.git $DOTFILES_DIR
+}
+
+function copy_custom_oh_my_zsh_parts() {
+  cp -R $DOTFILES_DIR/zsh/custom $OH_MY_ZSH_DIR/custom
+}
+
+function copy_github_configs() {
+  cp $DOTFILES_DIR/git/gitconfig $HOME/.gitconfig
+  cp $DOTFILES_DIR/git/gitignore_global $HOME/.gitignore_global
+}
+
+function copy_hyper_config() {
+  cp $DOTFILES_DIR/terminals/hyper.js $HOME/.hyper.js
+}
+
+function copy_nvim_config() {
+  mkdir -p $NVIM_CONFIG_DIR
+  cp $DOTFILES_DIR/nvim/init.vim $NVIM_CONFIG_DIR/init.vim
+}
+
+function copy_tmux_config() {
+  cp $DOTFILES_DIR/tmux.conf $HOME/.tmux.conf
+}
+
 function ensure_dependencies_exist() {
   if [[ ! user_has curl ]]; then
     echo "ERROR: Required dependency curl missing."
@@ -13,10 +48,8 @@ function ensure_dependencies_exist() {
 }
 
 function exit_if_dotfiles_dir_exists() {
-  local to_dir="$HOME/dotfiles"
-
-  if [[ -d "$to_dir" ]]; then
-    echo "ERROR: The $to_dir directory already exists."
+  if [[ -d "$DOTFILES_DIR" ]]; then
+    echo "ERROR: The $DOTFILES_DIR directory already exists."
     echo "Exiting..."
     return 1
   fi
@@ -31,18 +64,21 @@ function setup_node() {
   echo "Installing nvm..."
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh)"
 
-  shell_startup_file="~/.bashrc"
+  local shell_startup_file="$HOME/.bashrc"
   if [[ "$SHELL" == *"zsh"* ]]; then
-    shell_startup_file="~/.zshrc"
+    shell_startup_file="$HOME/.zshrc"
   fi
   source $shell_startup_file
 
   nvm install node
-  npm i -g npm cowsay lolcatjs
+  nvm alias default node
+  npm i -g npm cowsay prettier lolcatjs
 }
 
 function install_vim_start_packages() {
-  cd ~/.vim/pack/packages/start
+  local current_dir=`eval "pwd"`
+
+  cd $VIM_DIR/pack/packages/start
 
   git clone git@github.com:ctrlpvim/ctrlp.vim.git ctrlp
   git clone https://github.com/itchyny/lightline.vim lightline
@@ -55,29 +91,30 @@ function install_vim_start_packages() {
   git clone git@github.com:prettier/vim-prettier.git prettier
   cd prettier
   npm i
+
+  cd $current_dir
 }
 
 function install_vim_opt_packages() {
-  cd ~/.vim/pack/packages/opt
+  local current_dir=`eval "pwd"`
+
+  cd $VIM_DIR/pack/packages/opt
 
   git clone git@github.com:dracula/vim.git color-dracula
   git clone git@github.com:joshdick/onedark.vim.git color-one-dark
+
+  cd $current_dir
 }
 
 function setup_vim() {
-  local current_dir=`eval "pwd"`
-  local to_dir="$HOME/.vim"
-
-  if [[ -d "$to_dir" ]]; then
-    echo "INFO: The $to_dir directory already exists. Skipping Vim setup."
+  if [[ -d "$VIM_DIR" ]]; then
+    echo "INFO: The $VIM_DIR directory already exists. Skipping Vim setup."
     return 0
   fi
 
-  cp -r ./vim $to_dir
+  cp -r $DOTFILES_DIR/vim $VIM_DIR
   install_vim_start_packages
   install_vim_opt_packages
-
-  cd $current_dir
 }
 
 function setup_zsh() {
@@ -93,6 +130,7 @@ function setup_zsh() {
     done
 
     install_zsh
+    copy_custom_oh_my_zsh_parts
     return 0
   fi
 
@@ -111,13 +149,24 @@ function main() {
 
   ensure_dependencies_exist
 
+  clone_dotfiles_directory
+  cd $DOTFILES_DIR
+
   setup_zsh
   setup_node
   setup_vim
 
-  # exit_if_dotfiles_dir_exists
+  copy_github_configs
+  copy_hyper_config
+  copy_nvim_config
+  copy_tmux_config
 
-  # Explain what else needs to be done manually.
+  cat << HEREDOC
+You must manually install:
+- An updated version of git.
+- nvim.
+- tmux.
+  HEREDOC
 
   echo "Finished."
 }

@@ -1,17 +1,13 @@
-Scott Tesler's dotfiles
----
+## Requirements
 
+`curl` and `git`
 
-Requirements
----
+## Install
 
+```bash
+curl -o- https://raw.githubusercontent.com/scotttesler/dotfiles/v0.34.0/install.sh | bash
+```
 
-Install
----
-
-    ./install.sh
-
-Update
----
+## Update
 
 🚧 WIP 🚧
