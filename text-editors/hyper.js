@@ -50,7 +50,7 @@ module.exports = {
     showHamburgerMenu: "",
     showWindowControls: "",
     termCSS: "",
-    updateChannel: "stable",
+    updateChannel: "canary",
     webGLRenderer: true
   },
   keymaps: {},
