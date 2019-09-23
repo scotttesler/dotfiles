@@ -55,6 +55,9 @@ packadd! color-one-dark
 syntax on
 colorscheme onedark
 
+" Lightline
+let g:lightline = { 'colorscheme': 'one' }
+
 " Change vim bracket highlighting colors
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 

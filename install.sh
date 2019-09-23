@@ -45,6 +45,7 @@ function install_vim_start_packages() {
   cd ~/.vim/pack/packages/start
 
   git clone git@github.com:ctrlpvim/ctrlp.vim.git ctrlp
+  git clone https://github.com/itchyny/lightline.vim lightline
   git clone git@github.com:scrooloose/nerdtree.git
   git clone git@github.com:tomtom/tcomment_vim.git tcomment
   git clone git@github.com:pangloss/vim-javascript.git
