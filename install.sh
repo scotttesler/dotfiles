@@ -147,27 +147,31 @@ function user_has() {
 function main() {
   set -e
 
-  ensure_dependencies_exist
-
-  clone_dotfiles_directory
-  cd $DOTFILES_DIR
-
-  setup_zsh
-  setup_node
-  setup_vim
-
-  copy_github_configs
-  copy_hyper_config
-  copy_nvim_config
-  copy_tmux_config
+  # ensure_dependencies_exist
+  #
+  # clone_dotfiles_directory
+  # cd $DOTFILES_DIR
+  #
+  # setup_zsh
+  # setup_node
+  # setup_vim
+  #
+  # copy_github_configs
+  # copy_hyper_config
+  # copy_nvim_config
+  # copy_tmux_config
 
   cat << MANUAL_INSTALLATION_INSTRUCTIONS
 You must manually install:
-- An updated version of git.
-- nvim.
-- tmux.
+- the fonts in the fonts directory
+- an updated version of git
+- nvim
+- tmux
+- Atom, VSCodium (and then copy over the settings)
+- Hyper Terminal (and then copy over the settings)
 MANUAL_INSTALLATION_INSTRUCTIONS
 
+  echo ""
   echo "Finished."
 }
 
