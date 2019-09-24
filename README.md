@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-curl -o- https://raw.githubusercontent.com/scotttesler/dotfiles/master/install.sh | bash
+curl -o- https://raw.githubusercontent.com/scotttesler/dotfiles/v1.0.0/install.sh | bash
 ```
 
 ## TODO
