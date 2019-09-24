@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-{
+{ # this ensures the entire script is downloaded #
 
 DOTFILES_DIR="$HOME/.dotfiles"
 OH_MY_ZSH_DIR="$HOME/.oh-my-zsh"
@@ -38,10 +38,10 @@ function copy_tmux_config() {
 }
 
 function ensure_dependencies_exist() {
-  if [[ ! user_has curl ]]; then
+  if ( ! user_has curl ); then
     echo "ERROR: Required dependency curl missing."
     exit 1
-  elif [[ ! user_has git ]]; then
+  elif ( ! user_has git ); then
     echo "ERROR: Required dependency git missing."
     exit 1
   fi
@@ -161,12 +161,12 @@ function main() {
   copy_nvim_config
   copy_tmux_config
 
-  cat << HEREDOC
+  cat << MANUAL_INSTALLATION_INSTRUCTIONS
 You must manually install:
 - An updated version of git.
 - nvim.
 - tmux.
-  HEREDOC
+MANUAL_INSTALLATION_INSTRUCTIONS
 
   echo "Finished."
 }
