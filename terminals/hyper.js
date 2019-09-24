@@ -55,5 +55,5 @@ module.exports = {
   },
   keymaps: {},
   localPlugins: [],
-  plugins: ["hyper-dracula"]
+  plugins: []
 };
