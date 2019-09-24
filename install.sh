@@ -147,19 +147,19 @@ function user_has() {
 function main() {
   set -e
 
-  # ensure_dependencies_exist
-  #
-  # clone_dotfiles_directory
-  # cd $DOTFILES_DIR
-  #
-  # setup_zsh
-  # setup_node
-  # setup_vim
-  #
-  # copy_github_configs
-  # copy_hyper_config
-  # copy_nvim_config
-  # copy_tmux_config
+  ensure_dependencies_exist
+
+  clone_dotfiles_directory
+  cd $DOTFILES_DIR
+
+  setup_zsh
+  setup_node
+  setup_vim
+
+  copy_github_configs
+  copy_hyper_config
+  copy_nvim_config
+  copy_tmux_config
 
   cat << MANUAL_INSTALLATION_INSTRUCTIONS
 You must manually install:
