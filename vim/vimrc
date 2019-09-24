@@ -12,7 +12,7 @@ set splitbelow " Split the new pane below the current one.
 set splitright " Split the new pane to the right of the current one.
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2
 
-" Get off my lawn
+" Promote best practices.
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
@@ -51,16 +51,17 @@ let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#parser = 'babylon'
 
 " Colorscheme -----------------------------------------------------------------
+packadd! color-one-dark
 syntax on
-let g:solarized_termcolors=256
-colorscheme dracula
-set background=dark
+colorscheme onedark
+
+" Lightline
+let g:lightline = { 'colorscheme': 'one' }
 
 " Change vim bracket highlighting colors
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
-" Local config ----------------------------------------------------------------
+" Base config overrides -------------------------------------------------------
 if filereadable($HOME . "/.vim/vimrc.local")
   source ~/.vim/vimrc.local
 endif
-

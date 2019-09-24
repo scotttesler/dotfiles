@@ -1,13 +1,13 @@
-# Scott Tesler's dotfiles
+## Requirements
 
----
+`curl` and `git`
 
-## .bash_profile
+## Install
 
-- Located in the `bash` directory.
+```bash
+curl -o- https://raw.githubusercontent.com/scotttesler/dotfiles/master/install.sh | bash
+```
 
-#### Requirements:
+## TODO
 
-1. Install to `~/.dotfiles`.
-1. `brew install coreutils`
-1. `npm i -g cowsay lolcatjs`
+- [ ] Add update.sh.

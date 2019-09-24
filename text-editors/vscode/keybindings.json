@@ -1,0 +1,46 @@
+[
+  {
+    "command": "editor.action.copyLinesDownAction",
+    "key": "shift+cmd+d"
+  },
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "cmd+k cmd+b"
+  },
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "ctrl+k ctrl+b"
+  },
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "cmd+\\"
+  },
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "ctrl+\\"
+  },
+  {
+    "command": "-workbench.action.focusSideBar",
+    "key": "cmd+0"
+  },
+  {
+    "command": "-workbench.action.focusSideBar",
+    "key": "ctrl+0"
+  },
+  {
+    "command": "workbench.action.zoomReset",
+    "key": "cmd+0"
+  },
+  {
+    "command": "workbench.action.zoomReset",
+    "key": "ctrl+0"
+  },
+  {
+    "command": "-workbench.action.zoomReset",
+    "key": "cmd+numpad0"
+  },
+  {
+    "command": "-workbench.action.zoomReset",
+    "key": "ctrl+numpad0"
+  }
+]
