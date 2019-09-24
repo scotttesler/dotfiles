@@ -53,8 +53,8 @@ updateVimPackages() {
   cd $current_dir
 }
 
-alias ber="bundle exec rake"
 alias brewu="brew update && brew upgrade && brew cleanup"
+alias dotfiles="cd ~/.dotfiles"
 alias gd="git diff"
 alias gf="git gc --prune=now && git fetch --all -p && git pull"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
