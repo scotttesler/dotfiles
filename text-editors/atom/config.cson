@@ -1,0 +1,74 @@
+"*":
+  Zen:
+    fullscreen: false
+    gutter: true
+    tabs: "multiple"
+  "autocomplete-plus":
+    autoActivationDelay: 2000
+  autosave:
+    enabled: true
+  core:
+    disabledPackages: [
+      "git-diff"
+      "go-to-line"
+      "language-coffee-script"
+      "language-git"
+      "language-hyperlink"
+      "language-objective-c"
+      "language-typescript"
+      "open-on-github"
+      "autoflow"
+      "autocomplete-atom-api"
+      "bookmarks"
+      "language-clojure"
+      "language-csharp"
+      "language-gfm"
+      "language-go"
+      "language-less"
+      "language-make"
+      "language-mustache"
+      "language-perl"
+      "language-php"
+      "language-python"
+      "language-sass"
+      "language-source"
+      "language-toml"
+      "language-xml"
+      "link"
+      "autocomplete-css"
+      "github"
+    ]
+    openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: []
+    telemetryConsent: "limited"
+    titleBar: "custom"
+  editor:
+    autoIndentOnPaste: false
+    fontSize: 11
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "dc685996-bf17-7e87-7c94-226714880be7"
+  fonts:
+    fontFamily: "Hermit"
+  "linter-ui-default":
+    panelHeight: 185
+    showPanel: true
+  "prettier-atom":
+    formatOnSaveOptions:
+      showInStatusBar: true
+  "tone-syntax":
+    color:
+      bg: "#f9f6fe"
+      duo: "#acac20"
+      syncUI: false
+      tri: "#6b6ef1"
+      uno: "#ae6590"
+  "tree-view":
+    squashDirectoryNames: true
+  typewriter: {}
+  welcome:
+    showOnStartup: false
+  whitespace: {}
