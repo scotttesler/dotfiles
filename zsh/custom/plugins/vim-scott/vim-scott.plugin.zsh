@@ -1,5 +1,5 @@
 function updateVimPackages() {
-  current_dir=`eval "pwd"`
+  local current_dir=`eval "pwd"`
 
   cd ~/.vim/pack/packages/start
 

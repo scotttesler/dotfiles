@@ -1,5 +1,5 @@
 function db() {
-  current_branch=`eval "git rev-parse --abbrev-ref HEAD"`
+  local current_branch=`eval "git rev-parse --abbrev-ref HEAD"`
 
   if [[ "$current_branch" == "master" ]]; then
     echo "Current branch is master. Cannot delete master."
