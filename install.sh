@@ -12,7 +12,7 @@ function clone_dotfiles_directory() {
 
   exit_if_dotfiles_dir_exists
 
-  git clone git@github.com:scotttesler/dotfiles.git $DOTFILES_DIR
+  git clone https://github.com/scotttesler/dotfiles.git $DOTFILES_DIR
 }
 
 function copy_custom_oh_my_zsh_parts() {
@@ -80,15 +80,15 @@ function install_vim_start_packages() {
 
   cd $VIM_DIR/pack/packages/start
 
-  git clone git@github.com:ctrlpvim/ctrlp.vim.git ctrlp
+  git clone https://github.com/ctrlpvim/ctrlp.vim.git ctrlp
   git clone https://github.com/itchyny/lightline.vim lightline
-  git clone git@github.com:scrooloose/nerdtree.git
-  git clone git@github.com:tomtom/tcomment_vim.git tcomment
-  git clone git@github.com:pangloss/vim-javascript.git
-  git clone git@github.com:mxw/vim-jsx.git
+  git clone https://github.com/scrooloose/nerdtree.git
+  git clone https://github.com/tomtom/tcomment_vim.git tcomment
+  git clone https://github.com/pangloss/vim-javascript.git
+  git clone https://github.com/mxw/vim-jsx.git
 
   # https://github.com/prettier/vim-prettier/tree/dc1dd622c4b82ec093e8ca36c93d582d4f92fd25#install
-  git clone git@github.com:prettier/vim-prettier.git prettier
+  git clone https://github.com/prettier/vim-prettier.git prettier
   cd prettier
   npm i
 
@@ -100,8 +100,8 @@ function install_vim_opt_packages() {
 
   cd $VIM_DIR/pack/packages/opt
 
-  git clone git@github.com:dracula/vim.git color-dracula
-  git clone git@github.com:joshdick/onedark.vim.git color-one-dark
+  git clone https://github.com/dracula/vim.git color-dracula
+  git clone https://github.com/joshdick/onedark.vim.git color-one-dark
 
   cd $current_dir
 }
