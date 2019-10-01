@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /usr/bin/env zsh
 
 { # this ensures the entire script is downloaded #
 
@@ -16,7 +16,9 @@ function clone_dotfiles_directory() {
 }
 
 function copy_custom_oh_my_zsh_parts() {
-  cp -R $DOTFILES_DIR/zsh/custom $OH_MY_ZSH_DIR/custom
+  echo "Copying custom zshrc and plugins ..."
+  cp $DOTFILES_DIR/zsh/zshrc $HOME/.zshrc
+  rsync -ah $DOTFILES_DIR/zsh/custom/ $OH_MY_ZSH_DIR/custom
 }
 
 function copy_github_configs() {
@@ -34,7 +36,7 @@ function copy_nvim_config() {
 }
 
 function copy_tmux_config() {
-  cp $DOTFILES_DIR/tmux.conf $HOME/.tmux.conf
+  cp $DOTFILES_DIR/tmux/tmux.conf $HOME/.tmux.conf
 }
 
 function ensure_dependencies_exist() {
@@ -55,8 +57,7 @@ function exit_if_dotfiles_dir_exists() {
   fi
 }
 
-function install_zsh() {
-  echo "Installing zsh..."
+function install_oh_my_zsh() {
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 }
 
@@ -64,14 +65,11 @@ function setup_node() {
   echo "Installing nvm..."
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh)"
 
-  local shell_startup_file="$HOME/.bashrc"
-  if [[ "$SHELL" == *"zsh"* ]]; then
-    shell_startup_file="$HOME/.zshrc"
-  fi
-  source $shell_startup_file
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
   nvm install node
-  nvm alias default node
   npm i -g npm cowsay prettier lolcatjs
 }
 
@@ -112,32 +110,14 @@ function setup_vim() {
     return 0
   fi
 
-  cp -r $DOTFILES_DIR/vim $VIM_DIR
+  cp -R $DOTFILES_DIR/vim $VIM_DIR
   install_vim_start_packages
   install_vim_opt_packages
 }
 
 function setup_zsh() {
-  echo "Checking the current shell..."
-
-  if [[ "$SHELL" == *"bash"* ]]; then
-    echo "You are currently using bash. Would you like to install zsh?"
-    select yn in "Yes" "No"; do
-      case $yn in
-        Yes ) break;;
-        No ) return 0;;
-      esac
-    done
-
-    install_zsh
-    copy_custom_oh_my_zsh_parts
-    return 0
-  fi
-
-  if [[ "$SHELL" == *"zsh"* ]]; then
-    echo "You are currently using zsh."
-    return 0
-  fi
+  install_oh_my_zsh
+  copy_custom_oh_my_zsh_parts
 }
 
 function user_has() {

@@ -1,6 +1,6 @@
 ## Requirements
 
-`curl` and `git`
+`curl`, `git`, `rsync`, and `zsh`
 
 ## Install
 
@@ -10,4 +10,4 @@ curl -o- https://raw.githubusercontent.com/scotttesler/dotfiles/v3.0.3/install.s
 
 ## TODO
 
-- [ ] Add update.sh.
+- [ ] Add update.zsh.
