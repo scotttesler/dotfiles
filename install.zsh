@@ -57,19 +57,27 @@ function exit_if_dotfiles_dir_exists() {
   fi
 }
 
-function install_oh_my_zsh() {
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+function install_fzf() {
+  git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
+  yes | $HOME/.fzf/install
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 }
 
-function setup_node() {
+function install_oh_my_zsh() {
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  copy_custom_oh_my_zsh_parts
+}
+
+function install_node() {
   echo "Installing nvm..."
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh)"
+  sh -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh)"
 
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
   nvm install node
+  nvm alias default node
   npm i -g npm cowsay prettier lolcatjs
 }
 
@@ -78,7 +86,6 @@ function install_vim_start_packages() {
 
   cd $VIM_DIR/pack/packages/start
 
-  git clone https://github.com/ctrlpvim/ctrlp.vim.git ctrlp
   git clone https://github.com/itchyny/lightline.vim lightline
   git clone https://github.com/scrooloose/nerdtree.git
   git clone https://github.com/tomtom/tcomment_vim.git tcomment
@@ -115,11 +122,6 @@ function setup_vim() {
   install_vim_opt_packages
 }
 
-function setup_zsh() {
-  install_oh_my_zsh
-  copy_custom_oh_my_zsh_parts
-}
-
 function user_has() {
   type "$1" > /dev/null 2>&1
 }
@@ -132,8 +134,9 @@ function main() {
   clone_dotfiles_directory
   cd $DOTFILES_DIR
 
-  setup_zsh
-  setup_node
+  install_oh_my_zsh
+  install_node
+  install_fzf
   setup_vim
 
   copy_github_configs

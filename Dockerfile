@@ -1,9 +1,24 @@
 # This is used to test the installation script.
 
-FROM debian:latest
+FROM ubuntu:latest
 
 RUN apt update -y && apt full-upgrade -y
-RUN apt install -y git curl zsh rsync
+RUN apt install -y curl git rsync zsh
+
+#################
+
+# FROM debian:latest
+#
+# RUN apt update -y && apt full-upgrade -y
+# RUN apt install -y curl git rsync zsh
+
+#################
+
+# FROM fedora:latest
+#
+# RUN dnf install -y curl findutils git rsync zsh
+
+#################
 
 ENV APPLICATION_USER dotfiles_test
 RUN adduser $APPLICATION_USER
