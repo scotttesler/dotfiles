@@ -59,17 +59,19 @@ function exit_if_dotfiles_dir_exists() {
 
 function install_oh_my_zsh() {
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  copy_custom_oh_my_zsh_parts
 }
 
-function setup_node() {
+function install_node() {
   echo "Installing nvm..."
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh)"
+  sh -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh)"
 
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
   nvm install node
+  nvm alias default node
   npm i -g npm cowsay prettier lolcatjs
 }
 
@@ -115,11 +117,6 @@ function setup_vim() {
   install_vim_opt_packages
 }
 
-function setup_zsh() {
-  install_oh_my_zsh
-  copy_custom_oh_my_zsh_parts
-}
-
 function user_has() {
   type "$1" > /dev/null 2>&1
 }
@@ -132,8 +129,8 @@ function main() {
   clone_dotfiles_directory
   cd $DOTFILES_DIR
 
-  setup_zsh
-  setup_node
+  install_oh_my_zsh
+  install_node
   setup_vim
 
   copy_github_configs
