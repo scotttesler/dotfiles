@@ -57,6 +57,12 @@ function exit_if_dotfiles_dir_exists() {
   fi
 }
 
+function install_fzf() {
+  git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
+  yes | $HOME/.fzf/install
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+}
+
 function install_oh_my_zsh() {
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   copy_custom_oh_my_zsh_parts
@@ -80,7 +86,6 @@ function install_vim_start_packages() {
 
   cd $VIM_DIR/pack/packages/start
 
-  git clone https://github.com/ctrlpvim/ctrlp.vim.git ctrlp
   git clone https://github.com/itchyny/lightline.vim lightline
   git clone https://github.com/scrooloose/nerdtree.git
   git clone https://github.com/tomtom/tcomment_vim.git tcomment
@@ -131,6 +136,7 @@ function main() {
 
   install_oh_my_zsh
   install_node
+  install_fzf
   setup_vim
 
   copy_github_configs
