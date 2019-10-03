@@ -4,7 +4,8 @@ set shellcmdflag=-ic " Enable bash aliases.
 
 " UI config ------------------------------------------------------------------
 set colorcolumn=80
-set mouse=a
+set mouse=a " Turn on mouse mode.
+set noshowmode " Hide the status line since we're using a custom status line.
 set nowrap " Do not wrap long lines.
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2
 
