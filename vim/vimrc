@@ -12,6 +12,8 @@ set splitbelow " Split the new pane below the current one.
 set splitright " Split the new pane to the right of the current one.
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2
 
+autocmd BufLeave,FocusLost * silent! wall " Save file on focus lost.
+
 " Promote best practices.
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
