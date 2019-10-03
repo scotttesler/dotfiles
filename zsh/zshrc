@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker git-scott node-scott vim-scott)
+plugins=(docker git-scott node-scott updates-scott vim-scott)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,4 +109,3 @@ alias gwip="git add . && git commit -m 'WIP' && git push"
 alias ls="ls -ahlFG"
 alias proj="cd ~/Documents/projects"
 alias qf="git add . && git commit -m '.' && gri && gpfwl"
-alias upd="brewu && npm i -g npm && npm update -g && pip3 install --upgrade pip setuptools wheel && updateVimPackages && cd ~/.fzf && gf && cd ~"
