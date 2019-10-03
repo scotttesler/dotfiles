@@ -1,16 +1,24 @@
-" Init config -----------------------------------------------------------------
+" Init config ----------------------------------------------------------------
 set clipboard=unnamed
 set shellcmdflag=-ic " Enable bash aliases.
 
-" UI config -------------------------------------------------------------------
+" UI config ------------------------------------------------------------------
 set colorcolumn=80
 set mouse=a
 set nowrap " Do not wrap long lines.
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2
+
+" Line numbers.
 set number " Show line numbers.
 set relativenumber " Show relative line numbers.
+
+" Panes.
 set splitbelow " Split the new pane below the current one.
 set splitright " Split the new pane to the right of the current one.
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2
+
+" Whitespace.
+set list " Show whitespace.
+set listchars=tab:>¬,extends:>,precedes:<,space:·, " Characters.
 
 autocmd BufLeave,FocusLost * silent! wall " Save file on focus lost.
 
@@ -20,10 +28,10 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-" Snippets --------------------------------------------------------------------
+" Snippets -------------------------------------------------------------------
 iabbrev bp require 'pry'; binding.pry
 
-" Remove extra whitespace on save ---------------------------------------------
+" Remove extra whitespace on save --------------------------------------------
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
@@ -40,11 +48,11 @@ endfun
 
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-" NERDTree --------------------------------------------------------------------
+" NERDTree -------------------------------------------------------------------
 let NERDTreeShowHidden=1
 map <C-\> :NERDTreeToggle<CR>
 
-" Prettier --------------------------------------------------------------------
+" Prettier -------------------------------------------------------------------
 let g:prettier#config#single_quote = 'false'
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#jsx_bracket_same_line = 'false'
@@ -52,10 +60,10 @@ let g:prettier#config#arrow_parens = 'avoid'
 let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#parser = 'babylon'
 
-" fzf -------------------------------------------------------------------------
+" fzf ------------------------------------------------------------------------
 set rtp+=~/.fzf
 
-" Colorscheme -----------------------------------------------------------------
+" Colorscheme ----------------------------------------------------------------
 packadd! color-one-dark
 syntax on
 colorscheme onedark
@@ -66,7 +74,8 @@ let g:lightline = { 'colorscheme': 'one' }
 " Change vim bracket highlighting colors
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
-" Base config overrides -------------------------------------------------------
+" Base config overrides ------------------------------------------------------
 if filereadable($HOME . "/.vim/vimrc.local")
   source ~/.vim/vimrc.local
 endif
+
