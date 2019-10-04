@@ -5,6 +5,7 @@ set shellcmdflag=-ic " Enable bash aliases.
 " UI config ------------------------------------------------------------------
 set colorcolumn=80
 set mouse=a " Turn on mouse mode.
+set laststatus=2 " Always show a status line.
 set noshowmode " Hide the status line since we're using a custom status line.
 set nowrap " Do not wrap long lines.
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2
@@ -65,12 +66,12 @@ let g:prettier#config#parser = 'babylon'
 set rtp+=~/.fzf
 
 " Colorscheme ----------------------------------------------------------------
+" Lightline
+let g:lightline = { 'colorscheme': 'one' }
+
 packadd! color-one-dark
 syntax on
 colorscheme onedark
-
-" Lightline
-let g:lightline = { 'colorscheme': 'one' }
 
 " Change vim bracket highlighting colors
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
@@ -79,4 +80,3 @@ hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 if filereadable($HOME . "/.vim/vimrc.local")
   source ~/.vim/vimrc.local
 endif
-
