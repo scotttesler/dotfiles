@@ -64,6 +64,7 @@ let g:prettier#config#parser = 'babylon'
 
 " fzf ------------------------------------------------------------------------
 set rtp+=~/.fzf
+nnoremap <C-p> :FZF<CR>
 
 " Colorscheme ----------------------------------------------------------------
 " Lightline
