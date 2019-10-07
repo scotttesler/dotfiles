@@ -5,6 +5,7 @@ set shellcmdflag=-ic " Enable bash aliases.
 " UI config ------------------------------------------------------------------
 set colorcolumn=80
 set mouse=a " Turn on mouse mode.
+set nohlsearch " Don't keep searched terms highlighted.
 set laststatus=2 " Always show a status line.
 set noshowmode " Hide the INSERT line since we're using a custom status line.
 set nowrap " Do not wrap long lines.
