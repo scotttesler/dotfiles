@@ -1,75 +1,48 @@
 "*":
-  Zen:
-    fullscreen: false
-    gutter: true
-    tabs: "multiple"
   "autocomplete-plus":
-    autoActivationDelay: 2000
+    enableAutoActivation: false
   autosave:
     enabled: true
   core:
     disabledPackages: [
-      "git-diff"
-      "go-to-line"
-      "language-coffee-script"
-      "language-git"
-      "language-hyperlink"
-      "language-objective-c"
-      "language-typescript"
-      "open-on-github"
-      "autoflow"
       "autocomplete-atom-api"
       "bookmarks"
+      "git-diff"
+      "language-c"
       "language-clojure"
+      "language-coffee-script"
       "language-csharp"
-      "language-gfm"
-      "language-go"
+      "language-java"
       "language-less"
-      "language-make"
       "language-mustache"
+      "language-objective-c"
       "language-perl"
       "language-php"
       "language-python"
+      "language-rust-bundled"
       "language-sass"
-      "language-source"
       "language-toml"
+      "language-typescript"
       "language-xml"
-      "link"
-      "autocomplete-css"
+      "styleguide"
       "github"
+      "language-git"
+      "language-go"
+      "language-html"
+      "language-property-list"
+      "open-on-github"
+      "go-to-line"
+      "background-tips"
     ]
-    openEmptyEditorOnStart: false
-    packagesWithKeymapsDisabled: []
     telemetryConsent: "limited"
-    titleBar: "custom"
   editor:
-    autoIndentOnPaste: false
     fontFamily: "Fira Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace"
-    fontSize: 11
-    invisibles: {}
-    scrollPastEnd: true
+    fontSize: 12
     showIndentGuide: true
     showInvisibles: true
-  "exception-reporting":
-    userId: "dc685996-bf17-7e87-7c94-226714880be7"
-  fonts:
-    fontFamily: "Hermit"
+  "git-blame":
+    columnWidth: 365
   "linter-ui-default":
-    panelHeight: 185
     showPanel: true
-  "prettier-atom":
-    formatOnSaveOptions:
-      showInStatusBar: true
-  "tone-syntax":
-    color:
-      bg: "#f9f6fe"
-      duo: "#acac20"
-      syncUI: false
-      tri: "#6b6ef1"
-      uno: "#ae6590"
-  "tree-view":
-    squashDirectoryNames: true
-  typewriter: {}
   welcome:
     showOnStartup: false
-  whitespace: {}
