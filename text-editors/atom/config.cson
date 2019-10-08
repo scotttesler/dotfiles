@@ -44,6 +44,7 @@
     titleBar: "custom"
   editor:
     autoIndentOnPaste: false
+    fontFamily: "Fira Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace"
     fontSize: 11
     invisibles: {}
     scrollPastEnd: true
