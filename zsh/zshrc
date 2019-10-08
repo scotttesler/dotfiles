@@ -68,7 +68,14 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker git-scott node-scott updates-scott vim-scott)
+plugins=(
+  docker
+  git-scotttesler
+  node-scotttesler
+  updates-scotttesler
+  utils-scotttesler
+  vim-scotttesler
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,15 +104,5 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias brewu="brew update && brew upgrade && brew cleanup"
 alias dotfiles="cd ~/.dotfiles"
-alias gd="git diff"
-alias gf="git gc --prune=now && git fetch --all -p && git pull"
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gpfwl="git push --force-with-lease && cowsay -r 'Force push (with lease)' | lolcatjs"
-alias gri="git rebase -i origin/master"
-alias gs="git status"
-alias gwip="git add . && git commit -m 'WIP' && git push"
 alias ls="ls -ahlFG"
-alias proj="cd ~/Documents/projects"
-alias qf="git add . && git commit -m '.' && gri && gpfwl"
