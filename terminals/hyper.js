@@ -34,7 +34,7 @@ module.exports = {
     defaultSSHApp: true,
     env: {},
     fontFamily:
-      'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    '"Fira Code", "SF Mono", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
     fontSize: 12,
     fontWeight: "normal",
     fontWeightBold: "bold",
@@ -55,5 +55,5 @@ module.exports = {
   },
   keymaps: {},
   localPlugins: [],
-  plugins: []
+  plugins: ["hyper-font-ligatures"]
 };
