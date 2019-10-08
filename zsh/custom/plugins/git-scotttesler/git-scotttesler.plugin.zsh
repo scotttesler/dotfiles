@@ -20,7 +20,7 @@ function db() {
 }
 
 function gd() {
-  git diff
+  git diff $argv
 }
 
 function gf() {
