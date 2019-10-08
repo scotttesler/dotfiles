@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-curl -o- https://raw.githubusercontent.com/scotttesler/dotfiles/4.1.10/install.sh | zsh
+curl -o- https://raw.githubusercontent.com/scotttesler/dotfiles/4.1.10/install.zsh | zsh
 ```
 
 ## TODO
