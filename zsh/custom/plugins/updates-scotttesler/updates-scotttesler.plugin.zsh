@@ -33,6 +33,13 @@ function upd() {
     echo "INFO: ~/.fzf does not exist."
   fi
 
+  if [[ -d "$HOME/.oh-my-zsh" ]]; then
+    cd ~/.oh-my-zsh
+    gf
+  else
+    echo "INFO: ~/.oh-my-zsh does not exist."
+  fi
+
   updateVimPackages
 
   cd $current_dir
