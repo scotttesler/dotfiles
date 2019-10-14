@@ -34,6 +34,11 @@ nnoremap <Down> :echoe "Use j"<CR>
 " Snippets -------------------------------------------------------------------
 iabbrev bp require 'pry'; binding.pry
 
+" Functions ------------------------------------------------------------------
+fun CopyToClipboard()
+  let @+ = expand("%")
+endfun
+
 " Remove extra whitespace on save --------------------------------------------
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
