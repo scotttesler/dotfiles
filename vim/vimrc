@@ -35,7 +35,7 @@ nnoremap <Down> :echoe "Use j"<CR>
 iabbrev bp require 'pry'; binding.pry
 
 " Functions ------------------------------------------------------------------
-fun CopyToClipboard()
+fun CopyFilenameToClipboard()
   let @+ = expand("%")
 endfun
 
