@@ -4,7 +4,6 @@ set shellcmdflag=-ic " Enable bash aliases.
 
 " UI config ------------------------------------------------------------------
 set colorcolumn=80
-set mouse=a " Turn on mouse mode.
 set nohlsearch " Don't keep searched terms highlighted.
 set laststatus=2 " Always show a status line.
 set noshowmode " Hide the INSERT line since we're using a custom status line.
@@ -24,6 +23,14 @@ set list " Show whitespace.
 set listchars=tab:>¬,extends:>,precedes:<,space:·, " Characters.
 
 autocmd BufLeave,FocusLost * silent! wall " Save file on focus lost.
+
+" Mouse mode
+set mouse=a " Turn on mouse mode.
+" Mouse scrolls by 1 line at a time.
+noremap <ScrollWheelUp> 1<C-Y>
+noremap <ScrollWheelDown> 1<C-E>
+inoremap <ScrollWheelUp> <C-O>1<C-Y>
+inoremap <ScrollWheelDown> <C-O>1<C-E>
 
 " Promote best practices.
 nnoremap <Left> :echoe "Use h"<CR>
