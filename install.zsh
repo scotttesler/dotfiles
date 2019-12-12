@@ -70,11 +70,10 @@ function install_oh_my_zsh() {
 
 function install_node() {
   echo "Installing nvm..."
-  sh -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh)"
+  sh -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh)"
 
-  export NVM_DIR="$HOME/.nvm"
+  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
   nvm install node
   nvm alias default node
