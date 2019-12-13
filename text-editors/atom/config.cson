@@ -36,7 +36,7 @@
     ]
     telemetryConsent: "limited"
   editor:
-    fontFamily: "Fira Code, SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace"
+    fontFamily: "SF Mono, Menlo, Consolas, DejaVu Sans Mono, monospace"
     fontSize: 12
     showIndentGuide: true
     showInvisibles: true
