@@ -149,7 +149,6 @@ You must manually install:
 - nvim
 - tmux
 - Atom, VSCodium (and then copy over the settings)
-- Hyper Terminal (and then copy over the settings)
 MANUAL_INSTALLATION_INSTRUCTIONS
 
   echo ""
