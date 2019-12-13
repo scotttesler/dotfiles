@@ -145,7 +145,6 @@ function main() {
 
   cat << MANUAL_INSTALLATION_INSTRUCTIONS
 You must manually install:
-- the fonts in the fonts directory
 - an updated version of git
 - nvim
 - tmux
