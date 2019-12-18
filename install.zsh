@@ -26,10 +26,6 @@ function copy_github_configs() {
   cp $DOTFILES_DIR/git/gitignore_global $HOME/.gitignore_global
 }
 
-function copy_hyper_config() {
-  cp $DOTFILES_DIR/terminals/hyper.js $HOME/.hyper.js
-}
-
 function copy_nvim_config() {
   mkdir -p $NVIM_CONFIG_DIR
   cp $DOTFILES_DIR/nvim/init.vim $NVIM_CONFIG_DIR/init.vim
@@ -77,7 +73,7 @@ function install_node() {
 
   nvm install node
   nvm alias default node
-  npm i -g npm cowsay prettier lolcatjs
+  npm i -g npm cowsay prettier lolcatjs spaceship-prompt
 }
 
 function install_vim_start_packages() {
@@ -139,7 +135,6 @@ function main() {
   setup_vim
 
   copy_github_configs
-  copy_hyper_config
   copy_nvim_config
   copy_tmux_config
 
