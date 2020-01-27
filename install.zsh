@@ -81,6 +81,7 @@ function install_vim_start_packages() {
 
   cd $VIM_DIR/pack/packages/start
 
+  git clone https://github.com/ryanoasis/vim-devicons.git dev-icons
   git clone https://github.com/itchyny/lightline.vim lightline
   git clone https://github.com/scrooloose/nerdtree.git
   git clone https://github.com/tomtom/tcomment_vim.git tcomment
