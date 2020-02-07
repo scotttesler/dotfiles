@@ -1,0 +1,7 @@
+{
+  "Add debugger": {
+    "body": ["require 'pry'; binding.pry"],
+    "description": "Add debugger",
+    "prefix": "bp"
+  }
+}
