@@ -12,27 +12,27 @@ function clone_dotfiles_directory() {
 
   exit_if_dotfiles_dir_exists
 
-  git clone https://github.com/scotttesler/dotfiles.git $DOTFILES_DIR
+  git clone https://github.com/scotttesler/dotfiles.git "$DOTFILES_DIR"
 }
 
 function copy_custom_oh_my_zsh_parts() {
   echo "Copying custom zshrc and plugins ..."
-  cp $DOTFILES_DIR/zsh/zshrc $HOME/.zshrc
-  rsync -ah $DOTFILES_DIR/zsh/custom/ $OH_MY_ZSH_DIR/custom
+  cp "$DOTFILES_DIR/zsh/zshrc" "$HOME/.zshrc"
+  rsync -ah "$DOTFILES_DIR/zsh/custom/" "$OH_MY_ZSH_DIR/custom"
 }
 
 function copy_github_configs() {
-  cp $DOTFILES_DIR/git/gitconfig $HOME/.gitconfig
-  cp $DOTFILES_DIR/git/gitignore_global $HOME/.gitignore_global
+  cp "$DOTFILES_DIR/git/gitconfig" "$HOME/.gitconfig"
+  cp "$DOTFILES_DIR/git/gitignore_global" "$HOME/.gitignore_global"
 }
 
 function copy_nvim_config() {
-  mkdir -p $NVIM_CONFIG_DIR
-  cp $DOTFILES_DIR/nvim/init.vim $NVIM_CONFIG_DIR/init.vim
+  mkdir -p "$NVIM_CONFIG_DIR"
+  cp "$DOTFILES_DIR/nvim/init.vim" "$NVIM_CONFIG_DIR/init.vim"
 }
 
 function copy_tmux_config() {
-  cp $DOTFILES_DIR/tmux/tmux.conf $HOME/.tmux.conf
+  cp "$DOTFILES_DIR/tmux/tmux.conf" "$HOME/.tmux.conf"
 }
 
 function ensure_dependencies_exist() {
@@ -54,8 +54,10 @@ function exit_if_dotfiles_dir_exists() {
 }
 
 function install_fzf() {
-  git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
-  yes | $HOME/.fzf/install
+  git clone --depth 1 https://github.com/junegunn/fzf.git "$HOME/.fzf"
+  yes | "$HOME/.fzf/install"
+
+  # shellcheck source=/dev/null
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 }
 
@@ -68,7 +70,10 @@ function install_node() {
   echo "Installing nvm..."
   sh -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh)"
 
-  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+  NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+  export NVM_DIR
+
+  # shellcheck source=/dev/null
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
   nvm install node
@@ -77,9 +82,10 @@ function install_node() {
 }
 
 function install_vim_start_packages() {
-  local current_dir=`eval "pwd"`
+  local current_dir
+  current_dir=$(eval "pwd")
 
-  cd $VIM_DIR/pack/packages/start
+  cd "$VIM_DIR/pack/packages/start"
 
   git clone https://github.com/ryanoasis/vim-devicons.git dev-icons
   git clone https://github.com/itchyny/lightline.vim lightline
@@ -93,18 +99,19 @@ function install_vim_start_packages() {
   cd prettier
   npm i
 
-  cd $current_dir
+  cd "$current_dir"
 }
 
 function install_vim_opt_packages() {
-  local current_dir=`eval "pwd"`
+  local current_dir
+  current_dir=$(eval "pwd")
 
-  cd $VIM_DIR/pack/packages/opt
+  cd "$VIM_DIR/pack/packages/opt"
 
   git clone https://github.com/dracula/vim.git color-dracula
   git clone https://github.com/joshdick/onedark.vim.git color-one-dark
 
-  cd $current_dir
+  cd "$current_dir"
 }
 
 function setup_vim() {
@@ -113,7 +120,7 @@ function setup_vim() {
     return 0
   fi
 
-  cp -R $DOTFILES_DIR/vim $VIM_DIR
+  cp -R "$DOTFILES_DIR/vim" "$VIM_DIR"
   install_vim_start_packages
   install_vim_opt_packages
 }
@@ -128,7 +135,7 @@ function main() {
   ensure_dependencies_exist
 
   clone_dotfiles_directory
-  cd $DOTFILES_DIR
+  cd "$DOTFILES_DIR"
 
   install_oh_my_zsh
   install_node
