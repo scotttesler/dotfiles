@@ -21,7 +21,13 @@
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
   "git.enabled": false,
+  "jest.debugCodeLens.showWhenTestStateIn": [
+    "pass",
+    "fail",
+    "unknown"
+  ],
   "oneDarkPro.bold": true,
   "oneDarkPro.editorTheme": "Onedark Pro",
   "oneDarkPro.vivid": true,
