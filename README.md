@@ -1,6 +1,6 @@
 ## Requirements
 
-`curl`, `git`, `rsync`, and `zsh`
+`curl`, `git`, `neovim`, `rsync`, and `zsh`
 
 ## Install
 
