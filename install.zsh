@@ -78,7 +78,7 @@ function install_node() {
 
   nvm install node
   nvm alias default node
-  npm i -g npm cowsay prettier lolcatjs spaceship-prompt
+  npm i -g npm cowsay prettier lolcatjs
 }
 
 function install_vim_start_packages() {
