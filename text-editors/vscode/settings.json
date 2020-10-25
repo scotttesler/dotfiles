@@ -2,9 +2,7 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "breadcrumbs.enabled": false,
   "css.completion.triggerPropertyValueCompletion": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
@@ -14,28 +12,24 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.quickSuggestionsDelay": 1000,
   "editor.renderWhitespace": "all",
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
   "editor.tabSize": 2,
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "git.enabled": false,
-  "jest.debugCodeLens.showWhenTestStateIn": [
-    "pass",
-    "fail",
-    "unknown"
-  ],
+  "jest.debugCodeLens.showWhenTestStateIn": ["fail", "pass", "unknown"],
   "oneDarkPro.bold": true,
-  "oneDarkPro.editorTheme": "Onedark Pro",
   "oneDarkPro.vivid": true,
   "terminal.integrated.rendererType": "dom",
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": true,
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.iconTheme": "vscode-icons",
-  "workbench.statusBar.visible": false
+  "workbench.iconTheme": "vscode-icons-mac",
+  "workbench.statusBar.visible": true,
+  "oneDarkPro.editorTheme": "oneDarkPro",
+  "liveshare.featureSet": "insiders",
+  "liveshare.guestApprovalRequired": true
 }
