@@ -69,7 +69,6 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  docker
   git-scotttesler
   node-scotttesler
   updates-scotttesler
@@ -108,3 +107,17 @@ alias dotfiles="cd ~/.dotfiles"
 alias ls="ls -ahlFG"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+SPACESHIP_PROMPT_ORDER=(
+  dir           # Current directory section
+  git           # Git section (git_branch + git_status)
+  line_sep      # Line break
+  vi_mode       # Vi-mode indicator
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
