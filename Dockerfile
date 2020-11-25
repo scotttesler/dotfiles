@@ -3,20 +3,20 @@
 FROM ubuntu:latest
 
 RUN apt update -y && apt full-upgrade -y
-RUN apt install -y curl git rsync zsh
+RUN apt install -y curl git rsync silversearcher-ag zsh
 
 #################
 
 # FROM debian:latest
 #
 # RUN apt update -y && apt full-upgrade -y
-# RUN apt install -y curl git rsync zsh
+# RUN apt install -y curl git rsync silversearcher-ag zsh
 
 #################
 
 # FROM fedora:latest
 #
-# RUN dnf install -y curl findutils git rsync zsh
+# RUN dnf install -y curl findutils git rsync the_silver_searcher zsh
 
 #################
 
