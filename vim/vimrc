@@ -80,6 +80,21 @@ let g:prettier#config#parser = 'babylon'
 set rtp+=~/.fzf
 nnoremap <C-p> :FZF<CR>
 
+" Searching ------------------------------------------------------------------
+if executable('ag')
+  " Use ag instead of grep.
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ack with ag.
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
+
+" Bind \ to search shortcut.
+nnoremap \ :Ack!<SPACE>
+
+" Bind K to search for the word under the cursor.
+nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 " Colorscheme ----------------------------------------------------------------
 " Lightline
 let g:lightline = { 'colorscheme': 'one' }
