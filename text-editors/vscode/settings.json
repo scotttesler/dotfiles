@@ -18,18 +18,13 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "git.enabled": false,
+  "git.enabled": true,
   "jest.debugCodeLens.showWhenTestStateIn": ["fail", "pass", "unknown"],
-  "oneDarkPro.bold": true,
-  "oneDarkPro.vivid": true,
   "terminal.integrated.rendererType": "dom",
   "workbench.activityBar.visible": true,
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.iconTheme": "vscode-icons-mac",
-  "workbench.statusBar.visible": true,
-  "oneDarkPro.editorTheme": "oneDarkPro",
-  "liveshare.featureSet": "insiders",
-  "liveshare.guestApprovalRequired": true
+  "workbench.statusBar.visible": true
 }
