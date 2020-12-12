@@ -25,6 +25,5 @@
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.iconTheme": "vscode-icons-mac",
   "workbench.statusBar.visible": true
 }
