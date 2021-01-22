@@ -4,7 +4,7 @@ function install_latest_node() {
     exit 1
   fi
 
-  local current_node=`eval "nvm current"`
+  local current_node=$(nvm current)
 
   nvm install node
   nvm alias default node

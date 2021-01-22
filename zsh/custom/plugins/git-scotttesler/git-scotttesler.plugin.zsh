@@ -1,8 +1,9 @@
 function db() {
-  local current_branch=`eval "git rev-parse --abbrev-ref HEAD"`
+  local current_branch=$(git rev-parse --abbrev-ref HEAD)
+  local default_branch=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
 
-  if [[ "$current_branch" == "master" ]]; then
-    echo "Current branch is master. Cannot delete master."
+  if [[ "$current_branch" == "$default_branch" ]]; then
+    echo "Current branch is $default_branch. Cannot delete $default_branch."
     return 0
   fi
 
@@ -14,7 +15,7 @@ function db() {
     esac
   done
 
-  git checkout master
+  git checkout $default_branch
   git branch -D $current_branch
   gf
 }

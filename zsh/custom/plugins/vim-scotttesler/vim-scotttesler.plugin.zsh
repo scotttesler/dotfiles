@@ -1,5 +1,5 @@
 function updateVimPackages() {
-  local current_dir=`eval "pwd"`
+  local current_dir=$(pwd)
   local vim_dir="$HOME/.vim"
 
   if [[ ! -d "$vim_dir" ]]; then
