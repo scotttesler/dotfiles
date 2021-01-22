@@ -6,7 +6,7 @@ function brewu() {
 }
 
 function upd() {
-  local current_dir=`eval "pwd"`
+  local current_dir=$(pwd)
 
   if ( user_has brew ); then
     brewu

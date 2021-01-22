@@ -83,7 +83,7 @@ function install_node() {
 
 function install_vim_start_packages() {
   local current_dir
-  current_dir=$(eval "pwd")
+  current_dir=$(pwd)
 
   cd "$VIM_DIR/pack/packages/start"
 
@@ -105,7 +105,7 @@ function install_vim_start_packages() {
 
 function install_vim_opt_packages() {
   local current_dir
-  current_dir=$(eval "pwd")
+  current_dir=$(pwd)
 
   cd "$VIM_DIR/pack/packages/opt"
 
