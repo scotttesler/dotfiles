@@ -1,6 +1,6 @@
 function db() {
   local current_branch=$(git rev-parse --abbrev-ref HEAD)
-  local default_branch=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
+  local default_branch=$(default_branch)
 
   if [[ "$current_branch" == "$default_branch" ]]; then
     echo "Current branch is $default_branch. Cannot delete $default_branch."
@@ -18,6 +18,10 @@ function db() {
   git checkout $default_branch
   git branch -D $current_branch
   gf
+}
+
+function default_branch() {
+  git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@'
 }
 
 function gd() {
@@ -46,7 +50,8 @@ function gpfwl() {
 }
 
 function gri() {
-  git rebase -i origin/master
+  local default_branch=$(default_branch)
+  git rebase -i origin/$default_branch
 }
 
 function gs() {
