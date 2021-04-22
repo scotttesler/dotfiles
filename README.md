@@ -2,7 +2,7 @@
 
 ## Requirements
 
-`curl`, `git`, `neovim`, `rsync`, [the Silver Surfer](https://github.com/ggreer/the_silver_searcher#installing), and `zsh`
+`curl`, `git`, `neovim`, `rsync`, [the Silver Searcher](https://github.com/ggreer/the_silver_searcher#installing), and `zsh`
 
 ## Install
 
