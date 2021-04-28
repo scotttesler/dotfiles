@@ -1,5 +1,9 @@
 [
   {
+    "command": "workbench.action.closeActiveEditor",
+    "key": "ctrl+w"
+  },
+  {
     "command": "editor.action.copyLinesDownAction",
     "key": "shift+cmd+d"
   },
