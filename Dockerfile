@@ -28,7 +28,7 @@ RUN chown -R $APPLICATION_USER /app
 
 USER $APPLICATION_USER
 
-COPY ./install.zsh /app/install.zsh
+COPY ./install /app/install
 
 SHELL ["zsh"]
 RUN ./install.zsh

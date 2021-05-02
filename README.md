@@ -1,5 +1,3 @@
-![mrscottwhatyougonnado](misc/images/mrscottwhatyougonnado.jpg)
-
 ## Requirements
 
 `curl`, `git`, `neovim`, `rsync`, [the Silver Searcher](https://github.com/ggreer/the_silver_searcher#installing), and `zsh`
