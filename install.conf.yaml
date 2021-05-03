@@ -6,7 +6,7 @@
 - link:
     ~/.gitconfig:
     ~/.gitignore_global:
-    ~/nvim/init.vim:
+    # ~/nvim/init.vim:
     ~/.tmux.conf:
     ~/.vim:
     ~/.oh-my-zsh/custom: zsh/custom
