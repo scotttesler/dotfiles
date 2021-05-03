@@ -11,7 +11,6 @@
     ~/.vim:
     ~/.oh-my-zsh/custom: zsh/custom
     ~/.zshrc:
-- create:
 # - shell:
 #   - - Making zsh the default shell.
 #     - chsh -s $(which zsh)
