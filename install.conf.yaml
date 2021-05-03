@@ -1,0 +1,35 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+- link:
+    ~/.gitconfig:
+    ~/.gitignore_global:
+    ~/nvim/init.vim:
+    ~/.tmux.conf:
+    ~/.vim:
+    ~/.oh-my-zsh/custom: zsh/custom
+    ~/.zshrc:
+- create:
+- shell:
+  - - Making zsh the default shell.
+    - chsh -s $(which zsh)
+  - - Installing submodules.
+    - git submodule update --init --recursive
+  - - Installing fzf.
+    - git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    - ~/.fzf/install
+  - - Install oh-my-zsh.
+    - sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  - - Installing Node.
+    - sh -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh)"
+    - NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    - export NVM_DIR
+    - [ -s "$NVM_DIR/nvm.sh" ]
+    - . "$NVM_DIR/nvm.sh"
+    - nvm install node
+    - nvm alias default node
+    - npm i -g cowsay lolcatjs npm prettier spaceship-prompt
+
+- brewfile:
+  - Brewfile
