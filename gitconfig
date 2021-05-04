@@ -1,5 +1,5 @@
 [core]
-  editor = nvim
+  editor = vim
   excludesfile = ~/.gitignore_global
   pager = diff-so-fancy | less --tabs=4 -RFX
 [color]
@@ -12,6 +12,7 @@
 [color "diff"]
   meta = 11
   frag = magenta bold
+  func = 146 bold
   commit = yellow bold
   old = red bold
   new = green bold
