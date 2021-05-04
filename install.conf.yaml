@@ -14,8 +14,8 @@
     ~/.zshrc:
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf, Installing fzf]
-  - [npm i -g diff-so-fancy, Installing diff-so-fancy]
+  - [git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install, Installing fzf]
+  - [npm i -g cowsay diff-so-fancy lolcatjs npm prettier spaceship-prompt, Installing useful node modules]
 
   # - - Making zsh the default shell.
   #   - chsh -s $(which zsh)
