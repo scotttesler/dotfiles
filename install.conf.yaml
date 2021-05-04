@@ -19,9 +19,5 @@
   - yes | ~/.fzf/install
   - sh -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh)"
   - source ~/.zshrc
-  - npm config delete prefix
-  - install_latest_node
-  # - nvm install node
-  # - nvm alias default node
-  # - nvm uninstall $current_node
-  # - npm i -g cowsay diff-so-fancy lolcatjs npm prettier spaceship-prompt
+  # - npm config delete prefix
+  # - install_latest_node
