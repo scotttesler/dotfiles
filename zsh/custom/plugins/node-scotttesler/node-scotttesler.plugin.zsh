@@ -9,5 +9,5 @@ function install_latest_node() {
   nvm install node
   nvm alias default node
   nvm uninstall $current_node
-  npm i -g cowsay lolcatjs npm prettier spaceship-prompt
+  npm i -g cowsay diff-so-fancy lolcatjs npm prettier spaceship-prompt
 }
