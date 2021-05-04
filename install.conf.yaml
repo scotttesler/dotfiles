@@ -14,7 +14,7 @@
     ~/.zshrc:
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && yes | ~/.fzf/install && source ~/.zshrc, Installing fzf]
+  # - [git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && yes | ~/.fzf/install && source ~/.zshrc, Installing fzf]
   - - sh -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh)"
     - NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
     - export NVM_DIR
