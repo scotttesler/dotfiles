@@ -7,7 +7,7 @@
 - link:
     ~/.gitconfig:
     ~/.gitignore_global:
-    # ~/nvim/init.vim:
+    ~/nvim/init.vim: ~/.config/nvim/init.vim
     ~/.tmux.conf:
     ~/.vim:
     ~/.oh-my-zsh/custom: zsh/custom
@@ -15,6 +15,7 @@
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf, Installing fzf]
+  - [npm i -g diff-so-fancy, Installing diff-so-fancy]
 
   # - - Making zsh the default shell.
   #   - chsh -s $(which zsh)
