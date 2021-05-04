@@ -13,17 +13,15 @@
     ~/.oh-my-zsh/custom: zsh/custom
     ~/.zshrc:
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
-  - - rm -rf ~/.fzf
-    - git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    - yes | ~/.fzf/install
-    - source ~/.zshrc
-  - - sh -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh)"
-    - NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-    - export NVM_DIR
-    - [ -s "$NVM_DIR/nvm.sh" ]
-    - . "$NVM_DIR/nvm.sh"
-    - install_latest_node
-
-# - brewfile:
-#   - Brewfile
+  - git submodule update --init --recursive
+  - rm -rf ~/.fzf
+  - git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  - yes | ~/.fzf/install
+  - sh -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh)"
+  - source ~/.zshrc
+  - npm config delete prefix
+  # - install_latest_node
+  - nvm install node
+  - nvm alias default node
+  - nvm uninstall $current_node
+  - npm i -g cowsay diff-so-fancy lolcatjs npm prettier spaceship-prompt
