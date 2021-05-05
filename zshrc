@@ -121,5 +121,3 @@ SPACESHIP_PROMPT_ORDER=(
 # Set prompt.
 autoload -U promptinit; promptinit
 prompt spaceship
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
