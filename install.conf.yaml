@@ -27,7 +27,11 @@
   # - source ~/.zshrc
   # - npm config delete prefix
   # - install_latest_node
-  - npm i -g cowsay diff-so-fancy lolcatjs npm prettier pure-prompt spaceship-prompt
+  - npm i -g cowsay diff-so-fancy lolcatjs npm prettier spaceship-prompt
+  - yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  - $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+  - brew bundle
+  - $(brew --prefix)/opt/fzf/install
 
-- brewfile:
-    file: Brewfile
+# - brewfile:
+#     file: Brewfile

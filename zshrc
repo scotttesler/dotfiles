@@ -118,7 +118,8 @@ SPACESHIP_PROMPT_ORDER=(
   char          # Prompt character
 )
 
-# Set Spaceship ZSH as a prompt
+# Set prompt.
 autoload -U promptinit; promptinit
-# prompt spaceship
-prompt pure
+prompt spaceship
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
