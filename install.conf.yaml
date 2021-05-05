@@ -26,5 +26,5 @@
   - npm i -g cowsay diff-so-fancy lolcatjs npm prettier spaceship-prompt
   - yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   - eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  - brew bundle
-  - $(brew --prefix)/opt/fzf/install
+  - eval "$(brew bundle)"
+  - eval "$($(brew --prefix)/opt/fzf/install)"
