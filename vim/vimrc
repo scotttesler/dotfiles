@@ -78,7 +78,7 @@ let g:prettier#config#trailing_comma = 'none'
 let g:prettier#config#parser = 'babylon'
 
 " fzf ------------------------------------------------------------------------
-set rtp+=~/.fzf
+set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :FZF<CR>
 
 " Searching ------------------------------------------------------------------

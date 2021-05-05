@@ -3,6 +3,10 @@
       create: true
       force: true
       relink: true
+    brewfile:
+      stdout: false
+      stderr: false
+      include: ['tap', 'brew', 'cask', 'mas']
 - clean: ['~']
 - link:
     ~/.gitconfig:
@@ -15,12 +19,15 @@
 - shell:
   - git submodule update --init --recursive
 
-  - rm -rf ~/.fzf
-  - git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-  - yes | ~/.fzf/install
+  # - rm -rf ~/.fzf
+  # - git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  # - yes | ~/.fzf/install
 
   # - sh -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh)"
   # - source ~/.zshrc
   # - npm config delete prefix
   # - install_latest_node
-  - npm i -g cowsay diff-so-fancy lolcatjs npm prettier spaceship-prompt
+  - npm i -g cowsay diff-so-fancy lolcatjs npm prettier pure-prompt spaceship-prompt
+
+- brewfile:
+    file: Brewfile
