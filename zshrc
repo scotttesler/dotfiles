@@ -78,6 +78,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+zmodload zsh/nearcolor
+
 # User configuration
 
 # You may need to manually set your language environment
@@ -103,5 +105,7 @@ SPACESHIP_PROMPT_ORDER=(
   char      # Prompt character
 )
 
+# Prompt
 autoload -U promptinit; promptinit
+zstyle :prompt:pure:git:stash show yes
 prompt pure
