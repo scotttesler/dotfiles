@@ -22,8 +22,8 @@
   # - /bin/bash -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh)"
   # - source ~/.zshrc
   # - npm config delete prefix
-  # - install_latest_node
-  - npm i -g cowsay diff-so-fancy lolcatjs npm prettier spaceship-prompt
+  - install_latest_node
+  # - npm i -g cowsay diff-so-fancy lolcatjs npm pure-prompt
   - yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   - eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   - eval "$(brew bundle)"

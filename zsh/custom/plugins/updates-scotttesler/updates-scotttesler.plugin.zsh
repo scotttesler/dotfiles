@@ -21,26 +21,6 @@ function upd() {
     echo "INFO: node/npm not installed."
   fi
 
-  if ( user_has pip3 ); then
-    pip3 install --upgrade pip setuptools wheel
-  else
-    echo "INFO: python3/pip3 not installed."
-  fi
-
-  if [[ -d "$HOME/.fzf" ]]; then
-    cd ~/.fzf
-    gf
-  else
-    echo "INFO: ~/.fzf does not exist."
-  fi
-
-  if [[ -d "$HOME/.oh-my-zsh" ]]; then
-    cd ~/.oh-my-zsh
-    gf
-  else
-    echo "INFO: ~/.oh-my-zsh does not exist."
-  fi
-
   updateVimPackages
 
   cd $current_dir
