@@ -32,3 +32,9 @@
 [submodule "vim/pack/packages/start/smoothie"]
 	path = vim/pack/packages/start/smoothie
 	url = https://github.com/psliwka/vim-smoothie.git
+[submodule "vim/pack/packages/opt/color-papercolor"]
+	path = vim/pack/packages/opt/color-papercolor
+	url = https://github.com/NLKNguyen/papercolor-theme.git
+[submodule "vim/pack/packages/start/fzf-vim"]
+	path = vim/pack/packages/start/fzf-vim
+	url = https://github.com/junegunn/fzf.vim.git

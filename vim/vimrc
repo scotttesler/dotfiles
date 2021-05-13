@@ -19,8 +19,8 @@ set splitbelow " Split the new pane below the current one.
 set splitright " Split the new pane to the right of the current one.
 
 " Whitespace.
-set list " Show whitespace.
-set listchars=tab:>¬,extends:>,precedes:<,space:·, " Characters.
+" set list " Show whitespace.
+" set listchars=tab:>¬,extends:>,precedes:<,space:·, " Characters.
 
 autocmd BufLeave,FocusLost * silent! wall " Save file on focus lost.
 
@@ -80,6 +80,7 @@ let g:prettier#config#parser = 'babylon'
 " fzf ------------------------------------------------------------------------
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :FZF<CR>
+command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--preview', '~/.vim/pack/packages/start/fzf-vim/bin/preview.sh {}']}, <bang>0)
 
 " Searching ------------------------------------------------------------------
 if executable('ag')
@@ -100,8 +101,8 @@ nnoremap K :Ack! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " Lightline
 let g:lightline = { 'colorscheme': 'one' }
 
-packadd! color-one-dark
 syntax on
+packadd! color-one-dark
 colorscheme onedark
 
 " Change vim bracket highlighting colors
