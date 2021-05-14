@@ -99,7 +99,16 @@ nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Colorscheme ----------------------------------------------------------------
 " Lightline
-let g:lightline = { 'colorscheme': 'one' }
+fun! LightlineFilename()
+  let root = fnamemodify(get(b:, 'git_dir'), ':h')
+  let path = expand('%:p')
+  if path[:len(root)-1] ==# root
+    return path[len(root)+1:]
+  endif
+  return expand('%')
+endfun
+
+let g:lightline = { 'colorscheme': 'one', 'component_function': { 'filename': 'LightlineFilename' } }
 
 syntax on
 packadd! color-one-dark
