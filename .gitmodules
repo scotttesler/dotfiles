@@ -2,9 +2,9 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "vim/pack/packages/start/ack"]
-	path = vim/pack/packages/start/ack
-	url = https://github.com/mileszs/ack.vim.git
+[submodule "dotbot-brew"]
+	path = dotbot-brew
+	url = https://github.com/d12frosted/dotbot-brew.git
 [submodule "vim/pack/packages/start/dev-icons"]
 	path = vim/pack/packages/start/dev-icons
 	url = https://github.com/ryanoasis/vim-devicons.git
@@ -17,12 +17,6 @@
 [submodule "vim/pack/packages/start/tcomment"]
 	path = vim/pack/packages/start/tcomment
 	url = https://github.com/tomtom/tcomment_vim.git
-[submodule "vim/pack/packages/start/javascript"]
-	path = vim/pack/packages/start/javascript
-	url = https://github.com/pangloss/vim-javascript.git
-[submodule "vim/pack/packages/start/jsx-pretty"]
-	path = vim/pack/packages/start/jsx-pretty
-	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
 [submodule "vim/pack/packages/opt/color-dracula"]
 	path = vim/pack/packages/opt/color-dracula
 	url = https://github.com/dracula/vim.git
@@ -38,6 +32,7 @@
 [submodule "vim/pack/packages/start/fzf-vim"]
 	path = vim/pack/packages/start/fzf-vim
 	url = https://github.com/junegunn/fzf.vim.git
-[submodule "dotbot-brew"]
-	path = dotbot-brew
-	url = https://github.com/d12frosted/dotbot-brew.git
+[submodule "vim/pack/packages/start/polyglot"]
+	path = vim/pack/packages/start/polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+	shallow = true
