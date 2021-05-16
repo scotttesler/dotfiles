@@ -79,8 +79,8 @@ let g:prettier#config#parser = 'babylon'
 
 " fzf ------------------------------------------------------------------------
 set rtp+=/usr/local/opt/fzf
-nnoremap <C-p> :FZF<CR>
 command! -bang -nargs=? -complete=dir Files call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--preview', '~/.vim/pack/packages/start/fzf-vim/bin/preview.sh {}']}, <bang>0)
+nnoremap <C-p> :Files<CR>
 
 " Searching ------------------------------------------------------------------
 if executable('ag')
