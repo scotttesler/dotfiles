@@ -38,3 +38,6 @@
 [submodule "vim/pack/packages/start/fzf-vim"]
 	path = vim/pack/packages/start/fzf-vim
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule "dotbot-brew"]
+	path = dotbot-brew
+	url = https://github.com/d12frosted/dotbot-brew.git

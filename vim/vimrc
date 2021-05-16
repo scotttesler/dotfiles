@@ -92,7 +92,7 @@ if executable('ag')
 endif
 
 " Bind \ to search shortcut.
-nnoremap \ :Ag<SPACE>
+nnoremap \ :Ag<CR>
 
 " Bind K to search for the word under the cursor.
 nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>

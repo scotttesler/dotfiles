@@ -6,23 +6,16 @@
 - clean: ['~']
 - link:
     ~/.gitconfig:
+      force: false
     ~/.gitignore_global:
     ~/.config/nvim/init.vim: nvim/init.vim
     ~/.tmux.conf:
     ~/.vim:
     ~/.oh-my-zsh/custom: zsh/custom
     ~/.zshrc:
+      force: false
+- brewfile:
+  - Brewfile
 - shell:
-  - git submodule update --init --recursive
-
-  # - /bin/bash -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh)"
-  # - source ~/.zshrc
-
-  # - npm config delete prefix
-  # - install_latest_node
-
-  # - yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  # - eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  # - eval "$(brew bundle)"
-
-  # - eval "$($(brew --prefix)/opt/fzf/install)"
+  - [git submodule update --init --recursive, Installing submodules]
+  - $(brew --prefix)/opt/fzf/install
