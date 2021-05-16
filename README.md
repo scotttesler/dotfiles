@@ -1,1 +1,1 @@
-Just `./install` and you're good to go 🚀🚀🚀
+Just `./install` and you're good to go 🚀
