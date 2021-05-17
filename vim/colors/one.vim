@@ -1,3 +1,5 @@
+" https://github.com/AlexMax/.vim/blob/507a3b47357f7482bdf25820db355960adccd932/colors/one.vim
+"
 " one.vim by AlexMax
 "
 " A theme based on the One Dark theme for Atom.  Support for One Light might

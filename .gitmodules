@@ -36,3 +36,6 @@
 	path = vim/pack/packages/start/polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
 	shallow = true
+[submodule "vim/pack/packages/opt/gruvbox"]
+	path = vim/pack/packages/opt/gruvbox
+	url = git@github.com:morhetz/gruvbox.git
