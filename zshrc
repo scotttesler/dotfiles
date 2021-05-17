@@ -7,7 +7,6 @@ plugins=(
   node-scotttesler
   updates-scotttesler
   utils-scotttesler
-  vim-scotttesler
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -21,7 +21,5 @@ function upd() {
     echo "INFO: node/npm not installed."
   fi
 
-  updateVimPackages
-
   cd $current_dir
 }
