@@ -11,7 +11,10 @@
     ~/.config/nvim/init.vim: nvim/init.vim
     ~/.tmux.conf:
     ~/.vim:
-    ~/.oh-my-zsh/custom: zsh/custom
+    ~/.oh-my-zsh/custom/plugins/git-scotttesler: zsh/custom/plugins/git-scotttesler
+    ~/.oh-my-zsh/custom/plugins/node-scotttesler: zsh/custom/plugins/node-scotttesler
+    ~/.oh-my-zsh/custom/plugins/updates-scotttesler: zsh/custom/plugins/updates-scotttesler
+    ~/.oh-my-zsh/custom/plugins/utils-scotttesler: zsh/custom/plugins/utils-scotttesler
     ~/.zshrc:
       force: false
 - brewfile:
