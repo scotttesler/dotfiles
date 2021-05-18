@@ -21,4 +21,4 @@
   - Brewfile
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - $(brew --prefix)/opt/fzf/install
+  - [$(brew --prefix)/opt/fzf/install, Setting up fzf]

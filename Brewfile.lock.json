@@ -2,13 +2,13 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "2e24fbe205916fbec20425f850ffa36fc280fb75"
+        "revision": "1212ae9879ed484487aeed96cb8d31ef497893ed"
       },
       "homebrew/cask-fonts": {
-        "revision": "690cd1484e830f0e0aeb2afce4da92aeb6e21847"
+        "revision": "0a077de554c8d2ddc055f6c92012291105c0eb5e"
       },
       "homebrew/cask-versions": {
-        "revision": "50f9db0b1b29b1ce9fd9c1c171d5f23c3969c41e"
+        "revision": "e46f65f4daf0775cba8d8bf91309b2cf93deab1d"
       },
       "eth-p/software": {
         "revision": "13f36b9fac6da51f4b0290ba68c5b02a723c64b0"
@@ -452,7 +452,7 @@
         }
       },
       "sequel-ace": {
-        "version": "3.3.1,3028",
+        "version": "3.3.2,3030",
         "options": {
           "full_name": "sequel-ace"
         }
@@ -482,7 +482,7 @@
         }
       },
       "visual-studio-code-insiders": {
-        "version": "1.57.0,40d5e6796fbc32d67dd0009e5b0027003803fd7e",
+        "version": "1.57.0,82767cc1d7bf8cdea0f2897276d5d15aee91f3d9",
         "options": {
           "full_name": "visual-studio-code-insiders"
         }
@@ -510,6 +510,14 @@
         "CLT": "12.5.0.22.9",
         "Xcode": "12.5",
         "macOS": "11.3"
+      },
+      "catalina": {
+        "HOMEBREW_VERSION": "3.1.8",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "d419775e7df0949c2e1d4facc437f52eef8b9f67",
+        "CLT": "12.0.0.32.29",
+        "Xcode": "12.4",
+        "macOS": "10.15.7"
       }
     }
   }
