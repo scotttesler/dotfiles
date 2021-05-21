@@ -1,7 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
-# Plugins
 plugins=(
   git-scotttesler
   node-scotttesler
@@ -18,11 +17,14 @@ else
   export EDITOR='nvim'
 fi
 
-# Aliases
+# Aliases.
 alias dotfiles="cd ~/.dotfiles"
 alias ls="ls -ahlFG"
 
-# Prompt
+# Prompt.
 autoload -U promptinit; promptinit
 zstyle :prompt:pure:git:stash show yes
 prompt pure
+PURE_PROMPT_SYMBOL=' ❯'
+PROMPT='%(1j.[%j] .)%(?.%F{magenta}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
+
