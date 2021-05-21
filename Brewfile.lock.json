@@ -2,13 +2,13 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "1212ae9879ed484487aeed96cb8d31ef497893ed"
+        "revision": "d7a60868caff0a04db458cdd1d2afd7fbb8d3450"
       },
       "homebrew/cask-fonts": {
-        "revision": "0a077de554c8d2ddc055f6c92012291105c0eb5e"
+        "revision": "80fb6875fdf5291876e1e1d18fd2e6d57f5a36a0"
       },
       "homebrew/cask-versions": {
-        "revision": "e46f65f4daf0775cba8d8bf91309b2cf93deab1d"
+        "revision": "5e0123d917cf7d71d35753c62e4841ceef0eba3a"
       },
       "eth-p/software": {
         "revision": "13f36b9fac6da51f4b0290ba68c5b02a723c64b0"
@@ -482,7 +482,7 @@
         }
       },
       "visual-studio-code-insiders": {
-        "version": "1.57.0,82767cc1d7bf8cdea0f2897276d5d15aee91f3d9",
+        "version": "1.57.0,29c61570a5b9a669f777bb28b5acd5c37d99edbe",
         "options": {
           "full_name": "visual-studio-code-insiders"
         }
@@ -504,9 +504,9 @@
   "system": {
     "macos": {
       "big_sur": {
-        "HOMEBREW_VERSION": "3.1.7",
+        "HOMEBREW_VERSION": "3.1.8",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "d9ea855fa46e8b6f23f4e30dd15422c759032965",
+        "Homebrew/homebrew-core": "dce48126f9fd412839114d78f90607203eb0346a",
         "CLT": "12.5.0.22.9",
         "Xcode": "12.5",
         "macOS": "11.3"
