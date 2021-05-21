@@ -39,14 +39,7 @@ function gl() {
 
 function gpfwl() {
   git push --force-with-lease
-
-  if ( user_has cowsay ); then
-    if ( user_has lolcatjs ); then
-      cowsay -r 'Force push (with lease)' | lolcatjs
-    else
-      cowsay -r 'Force push (with lease)'
-    fi
-  fi
+  curl "https://api.github.com/octocat?s=You%20have%20force%20pushed"
 }
 
 function gri() {
