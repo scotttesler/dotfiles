@@ -5,18 +5,19 @@ tap "eth-p/software"
 
 # CLI
 brew "bat"
+brew "curl"
 brew "diff-so-fancy"
 brew "eth-p/software/bat-extras"
-brew "curl"
 brew "fzf"
 brew "git"
+brew "httpie"
 brew "jq"
 brew "neovim"
 brew "pure"
 brew "rbenv"
 brew "rsync"
-brew "tmux"
 brew "the_silver_searcher"
+brew "tmux"
 
 # Fonts
 cask "font-sf-mono-for-powerline"
