@@ -2,13 +2,13 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "c975a9e47d5672f0593690c7242c546d7b8e5209"
+        "revision": "c842e0e8fb1d7c1b3204d5315c85f6e43a81ca2b"
       },
       "homebrew/cask-fonts": {
-        "revision": "8962efc000e784721d64ffa3557af62aa42a4869"
+        "revision": "f635cbab6e2235e4df0d71905183b8b5216fdf8c"
       },
       "homebrew/cask-versions": {
-        "revision": "ffd4300be1eafd68d3796f72d10ec5545f0f2d53"
+        "revision": "3c953db67cbc580cfc5f939f302753bc2b1087bf"
       },
       "eth-p/software": {
         "revision": "13f36b9fac6da51f4b0290ba68c5b02a723c64b0"
@@ -45,15 +45,15 @@
         }
       },
       "diff-so-fancy": {
-        "version": "1.4.0",
+        "version": "1.4.1",
         "bottle": {
-          "rebuild": 1,
+          "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core",
           "files": {
             "all": {
               "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/diff-so-fancy/blobs/sha256:cad82a5ca348351d26bb9673dee9534f874c6df6cf1969b5254bef430773a4a7",
-              "sha256": "cad82a5ca348351d26bb9673dee9534f874c6df6cf1969b5254bef430773a4a7"
+              "url": "https://ghcr.io/v2/homebrew/core/diff-so-fancy/blobs/sha256:df388bbecf1a769af39a87110f1e045541b6dc727d34bc02f96a23e2edd1b1f2",
+              "sha256": "df388bbecf1a769af39a87110f1e045541b6dc727d34bc02f96a23e2edd1b1f2"
             }
           }
         }
@@ -499,7 +499,7 @@
         }
       },
       "spotify": {
-        "version": "1.1.60.668.gff09d345,1.1.60.668.gff09d345-7",
+        "version": "1.1.60.672.g6ad9c215,1.1.60.672.g6ad9c215-15",
         "options": {
           "full_name": "spotify"
         }
@@ -511,7 +511,7 @@
         }
       },
       "visual-studio-code-insiders": {
-        "version": "1.57.0,286b643ecd231f66f3f2e67e1456f3c601838b46",
+        "version": "1.57.0,541a5d4fa70ab3095f23b28b88914e1f6a8f65c4",
         "options": {
           "full_name": "visual-studio-code-insiders"
         }
@@ -533,12 +533,12 @@
   "system": {
     "macos": {
       "big_sur": {
-        "HOMEBREW_VERSION": "3.1.8",
+        "HOMEBREW_VERSION": "3.1.9",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "dce48126f9fd412839114d78f90607203eb0346a",
+        "Homebrew/homebrew-core": "2c9caec0138070f3e89c211bd486566f66dee248",
         "CLT": "12.5.0.22.9",
         "Xcode": "12.5",
-        "macOS": "11.3"
+        "macOS": "11.3.1"
       },
       "catalina": {
         "HOMEBREW_VERSION": "3.1.9",
