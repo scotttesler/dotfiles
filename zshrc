@@ -1,4 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
+export PATH="/usr/local/sbin:$PATH"
 ZSH_THEME="robbyrussell"
 
 plugins=(
@@ -27,4 +28,3 @@ zstyle :prompt:pure:git:stash show yes
 prompt pure
 PURE_PROMPT_SYMBOL=' ❯'
 PROMPT='%(1j.[%j] .)%(?.%F{magenta}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
-
