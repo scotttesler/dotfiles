@@ -25,7 +25,7 @@ alias dotfiles="cd ~/.dotfiles"
 alias ls="ls -ahlFG"
 
 # Prompt.
-if [[ -n "$CODESPACES" ]]; then
+if [[ ! -n "$CODESPACES" ]]; then
   autoload -U promptinit; promptinit
   zstyle :prompt:pure:git:stash show yes
   prompt pure
