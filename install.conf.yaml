@@ -19,4 +19,3 @@
       if: '[ -n "$CODESPACES" ]'
 - shell:
   - git submodule update --init --recursive
-  - script/install_brew_packages

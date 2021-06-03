@@ -25,8 +25,10 @@ alias dotfiles="cd ~/.dotfiles"
 alias ls="ls -ahlFG"
 
 # Prompt.
-autoload -U promptinit; promptinit
-zstyle :prompt:pure:git:stash show yes
-prompt pure
-PURE_PROMPT_SYMBOL=' ❯'
-PROMPT='%(1j.[%j] .)%(?.%F{magenta}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
+if [[ -n "$CODESPACES" ]]; then
+  autoload -U promptinit; promptinit
+  zstyle :prompt:pure:git:stash show yes
+  prompt pure
+  PURE_PROMPT_SYMBOL=' ❯'
+  PROMPT='%(1j.[%j] .)%(?.%F{magenta}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
+fi
