@@ -28,7 +28,3 @@ zstyle :prompt:pure:git:stash show yes
 prompt pure
 PURE_PROMPT_SYMBOL=' ❯'
 PROMPT='%(1j.[%j] .)%(?.%F{magenta}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
-
-if [[ -n "$CODESPACES" ]]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi

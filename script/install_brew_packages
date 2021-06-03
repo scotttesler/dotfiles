@@ -8,12 +8,17 @@ function user_has() {
 
 function install_homebrew() {
   yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+  if [ -n "$CODESPACES" ]; then
+    # We are in a GitHub Codespaces environment.
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
+  fi
 }
 
 function main() {
-  if [ -n "$CODESPACES" ]; then
-    # We are in a GitHub Codespaces environment.
+  if ! user_has brew; then
     install_homebrew
   fi
 
