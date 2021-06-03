@@ -1,6 +1,6 @@
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions" unless ENV["CODESPACES"]
+tap "homebrew/cask-versions"
 tap "eth-p/software"
 
 # CLI

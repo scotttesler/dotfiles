@@ -1,5 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/usr/local/sbin:$PATH"
+
+ZSH_DISABLE_COMPFIX=true
 ZSH_THEME="robbyrussell"
 
 plugins=(

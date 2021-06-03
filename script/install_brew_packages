@@ -10,6 +10,7 @@ function install_homebrew() {
   yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
   if [ -n "$CODESPACES" ]; then
+    echo "WE'RE IN CODESPACES"
     # We are in a GitHub Codespaces environment.
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
@@ -18,13 +19,21 @@ function install_homebrew() {
 }
 
 function main() {
+  echo "LEEEEEROY"
   if ! user_has brew; then
+    echo "HELLO"
     install_homebrew
   fi
 
   if user_has brew; then
+    echo "BUNDLING"
     brew bundle
-    yes | "$(brew --prefix)/opt/fzf/install"
+    echo "BUNDLED"
+
+    if ! user_has fzf; then
+      echo "NO FZF"
+      yes | "$(brew --prefix)/opt/fzf/install"
+    fi
   fi
 }
 
