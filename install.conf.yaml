@@ -16,7 +16,7 @@
     ~/.oh-my-zsh/custom/plugins/updates-scotttesler: zsh/custom/plugins/updates-scotttesler
     ~/.oh-my-zsh/custom/plugins/utils-scotttesler: zsh/custom/plugins/utils-scotttesler
     ~/.zshrc:
-      force: false
+      if: '[ -n "$CODESPACES" ]'
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
-  - [$(brew --prefix)/opt/fzf/install, Setting up fzf]
+  - git submodule update --init --recursive
+  - script/install_brew_packages

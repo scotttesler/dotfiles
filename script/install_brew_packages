@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+set -e
+
+function user_has() {
+  type "$1" > /dev/null 2>&1
+}
+
+function install_homebrew() {
+  yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  if [ -n "$CODESPACES" ]; then
+    # We are in a GitHub Codespaces environment.
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
+  fi
+}
+
+function main() {
+  if ! user_has brew; then
+    install_homebrew
+  fi
+
+  if user_has brew; then
+    brew bundle
+
+    if ! user_has fzf; then
+      yes | "$(brew --prefix)/opt/fzf/install"
+    fi
+  fi
+}
+
+main
