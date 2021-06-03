@@ -2,9 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "dotbot-brew"]
-	path = dotbot-brew
-	url = https://github.com/d12frosted/dotbot-brew.git
 [submodule "vim/pack/packages/start/dev-icons"]
 	path = vim/pack/packages/start/dev-icons
 	url = https://github.com/ryanoasis/vim-devicons.git
