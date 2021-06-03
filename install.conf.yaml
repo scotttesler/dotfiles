@@ -17,8 +17,6 @@
     ~/.oh-my-zsh/custom/plugins/utils-scotttesler: zsh/custom/plugins/utils-scotttesler
     ~/.zshrc:
       force: false
-- brewfile:
-  - Brewfile
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [$(brew --prefix)/opt/fzf/install, Setting up fzf]
