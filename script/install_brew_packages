@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -e
+
+function user_has() {
+  type "$1" > /dev/null 2>&1
+}
+
+if user_has brew; then
+  brew bundle
+  exit
+fi
+
+if [ -n "$CODESPACES" ]; then
+  # We're in GitHub Codespaces.
+  yes | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  brew bundle
+  yes | "$(brew --prefix)/opt/fzf/install"
+fi
