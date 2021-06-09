@@ -14,7 +14,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Default editor.
-if [[ -n $SSH_CONNECTION ]]; then
+if [[ -n $SSH_CONNECTION ]] || [[ -n $CODESPACES ]]; then
   export EDITOR='vim'
 else
   export EDITOR='nvim'
