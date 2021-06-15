@@ -24,7 +24,6 @@ cask "font-sf-mono-for-powerline"
 
 # Applications
 unless ENV["CODESPACES"]
-  cask "atom-nightly"
   cask "brave-browser-nightly"
   cask "docker"
   cask "gifcapture"
