@@ -22,7 +22,8 @@ fi
 
 # Aliases.
 alias dotfiles="cd ~/.dotfiles"
-alias ls="ls -ahlFG"
+# alias ls="ls -ahlFG" # Backup in case 'exa' is not available.
+alias ls="exa -ahl"
 
 # Prompt.
 if [[ ! -n "$CODESPACES" ]]; then
